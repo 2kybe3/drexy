@@ -1,0 +1,11 @@
+# ssh-agent
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    eval "$(ssh-agent -s)"
+fi
+
+ssh-add -l | grep -q "$(ssh-keygen -lf ~/.ssh/kybe.pub | awk '{print $2}')" || ssh-add ~/.ssh/kybe
+
+# sway autostart TTY1
+if [ -z "$SSH_TTY" ] && [ -z "$DISPLAY" ] && [ -z "$WAYLAND_DISPLAY" ] && [ "$(tty)" = /dev/tty1 ] && command -v sway >/dev/null 2>&1; then
+  exec sway --unsupported-gpu
+fi

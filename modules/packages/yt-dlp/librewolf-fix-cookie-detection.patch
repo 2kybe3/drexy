@@ -1,0 +1,23 @@
+From 1f6faa33154784fdf7649157b662088a285297f2 Mon Sep 17 00:00:00 2001
+From: 2kybe3 <kybe@kybe.xyz>
+Date: Sun, 21 Jun 2026 00:20:09 +0200
+Subject: [PATCH] librewolf: fix cookie detection
+
+---
+ yt_dlp/cookies.py | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/yt_dlp/cookies.py b/yt_dlp/cookies.py
+index 831b3a2c8..b06fe8c04 100644
+--- a/yt_dlp/cookies.py
++++ b/yt_dlp/cookies.py
+@@ -212,6 +212,7 @@ def _firefox_browser_dirs():
+ 
+     else:
+         yield from map(os.path.expanduser, (
++            '~/.librewolf',
+             # New installations of FF147+ respect the XDG base directory specification
+             # Ref: https://bugzilla.mozilla.org/show_bug.cgi?id=259356
+             os.path.join(_config_home(), 'mozilla/firefox'),
+-- 
+2.54.0

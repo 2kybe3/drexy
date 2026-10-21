@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "version": "1.0",
+    "name": "kybe - theme",
+    "description": "kybe - theme",
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "kybe@kybe.xyz",
+            "data_collection_permissions": {
+                "required": [
+                    "none"
+                ]
+            }
+        }
+    },
+    "theme": {
+        "colors": {
+            "sidebar": "@main@",
+            "frame": "@main@",
+            "tab_background_text": "@text@",
+            "toolbar": "@main@",
+            "toolbar_field": "@main@",
+            "toolbar_field_text": "@text@",
+            "toolbar_field_border": "@bright@",
+            "toolbar_bottom_separator": "@bright@",
+            "icons": "@bright@",
+            "tab_line": "@bright@",
+            "popup": "@main@",
+            "popup_text": "@text@",
+            "popup_border": "@main_alt@",
+            "ntp_background": "@main@",
+            "ntp_text": "@text@"
+        }
+    }
+}
