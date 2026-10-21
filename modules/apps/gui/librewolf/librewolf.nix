@@ -7,6 +7,9 @@
       ...
     }:
     {
+      home.file.".config/librewolf/librewolf/librewolf.overrides.cfg".source =
+        config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.librewolf/librewolf.overrides.cfg";
+
       programs.librewolf = {
         enable = true;
         package = pkgs.librewolf;
@@ -19,6 +22,8 @@
           "de"
           "en-US"
         ];
+
+        profiles.main.isDefault = true;
 
         policies = {
           DisplayBookmarksToolbar = "newtab";
@@ -102,12 +107,8 @@
         };
 
         settings = {
-          "media.autoplay.blocking_policy" = 2;
-
           "privacy.fingerprintingProtection" = true;
           "privacy.resistFingerprinting.letterboxing" = true;
-
-          "network.cookie.lifetimePolicy" = 0;
 
           "geo.enabled" = false;
           "dom.battery.enabled" = false;

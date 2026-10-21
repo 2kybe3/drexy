@@ -22,8 +22,13 @@
 
         buildPhase = ''
           runHook preBuild
+
+          mkdir -p build
+          cp $src build/manifest.json
+
           mkdir $out
-          ${lib.getExe pkgs.zip} $out/theme.xpi $src
+          ${lib.getExe pkgs.zip} -j $out/theme.xpi build/manifest.json
+
           runHook postBuild
         '';
       };
