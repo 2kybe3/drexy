@@ -2,18 +2,18 @@
   flake.homeModules.kybe =
     {
       pkgs,
-      kylib,
+      basenix,
       ...
     }:
     {
       services.dunst = {
         enable = true;
         settings =
-          with kylib.colors;
+          with basenix.colors;
           let
             urgency_low_normal = {
-              background = main;
-              foreground = text;
+              background = base00;
+              foreground = base05;
               timeout = 10;
             };
           in
@@ -27,7 +27,7 @@
 
               # dunstify -h int:value:12
               frame_width = 1;
-              frame_color = outline;
+              frame_color = base01;
 
               alignment = "center";
 
@@ -39,7 +39,7 @@
 
             urgency_critical = urgency_low_normal // {
               timeout = 0;
-              frame_color = red;
+              frame_color = base08;
             };
           };
       };

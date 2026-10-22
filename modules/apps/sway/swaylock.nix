@@ -3,15 +3,15 @@
 
   flake.homeModules.kybe =
     {
-      kylib,
+      basenix,
       ...
     }:
     {
       programs.swaylock = {
         enable = true;
         settings = {
-          key-hl-color = kylib.colors.lib.stripHash kylib.colors.selected;
-          ring-color = kylib.colors.lib.stripHash kylib.colors.main;
+          key-hl-color = basenix.stripHash basenix.colors.base02;
+          ring-color = basenix.stripHash basenix.colors.base00;
           ignore-empty-password = true;
           show-failed-attempts = true;
           line-uses-ring = true;

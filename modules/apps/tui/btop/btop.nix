@@ -3,13 +3,11 @@
     {
       lib,
       pkgs,
-      kylib,
+      basenix,
       ...
     }:
     {
-      xdg.configFile."btop/themes/kybe.theme".text = kylib.colors.lib.substitute (
-        builtins.readFile ./kybe.theme
-      );
+      xdg.configFile."btop/themes/kybe.theme".text = basenix.substitute (builtins.readFile ./kybe.theme);
 
       programs.btop = {
         enable = true;

@@ -2,11 +2,18 @@
   flake.homeModules.kybe =
     {
       lib,
-      inputs',
+      inputs,
+      basenix,
       ...
     }:
     let
-      kyvim = inputs'.kyvim.packages.default;
+      lib = inputs.kyvim.lib.mkPackage {
+        theme = {
+          name = "kybe";
+          theme = basenix.vimTheme;
+        };
+      };
+      kyvim = lib.wrapped;
     in
     {
       home = {

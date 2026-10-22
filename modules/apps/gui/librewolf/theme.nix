@@ -3,7 +3,7 @@
     {
       lib,
       pkgs,
-      kylib,
+      basenix,
       ...
     }:
     {
@@ -14,9 +14,7 @@
         __structuredAttrs = true;
         strictDeps = true;
 
-        src = builtins.toFile "manifest.json" (
-          kylib.colors.lib.substitute (builtins.readFile ./manifest.json)
-        );
+        src = builtins.toFile "manifest.json" (basenix.substitute (builtins.readFile ./manifest.json));
 
         unpackPhase = ":";
 

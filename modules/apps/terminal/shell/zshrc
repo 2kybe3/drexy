@@ -11,7 +11,7 @@ add-zsh-hook precmd vcs_info
 
 setopt PROMPT_SUBST
 
-export PROMPT=' %F{@red@}%(?..[%?] )%F{@bright@}%~${vcs_info_msg_0_:+ ${vcs_info_msg_0_}} λ %f'
+export PROMPT=' %F{@base08@}%(?..[%?] )%F{@base05@}%~${vcs_info_msg_0_:+ ${vcs_info_msg_0_}} λ %f'
 
 # ssh-agent
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then

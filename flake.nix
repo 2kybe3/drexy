@@ -34,6 +34,8 @@
     kymenu.url = "git+https://git.kybe.xyz/2kybe3/kymenu.git";
     kymenu-extras.url = "git+https://git.kybe.xyz/2kybe3/kymenu-extras.git";
 
+    basenix.url = "git+https://git.kybe.xyz/2kybe3/basenix.git";
+
     rust-overlay = {
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";

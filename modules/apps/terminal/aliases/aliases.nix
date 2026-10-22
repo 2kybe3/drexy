@@ -3,7 +3,7 @@
     {
       lib,
       pkgs,
-      kylib,
+      basenix,
       ...
     }:
     let
@@ -16,8 +16,8 @@
 
         ears = "bluetoothctl connect ${headPhones}";
 
-        lava = "${lib.getExe pkgs.lavat} -g -c ${kylib.colors.lib.stripHash kylib.colors.main} -k ${kylib.colors.lib.stripHash kylib.colors.main_alt}";
-        clock = "${lib.getExe pkgs.clock-rs} --color \"${kylib.colors.bright}\"";
+        lava = "${lib.getExe pkgs.lavat} -g -c ${basenix.stripHash basenix.colors.base00} -k ${basenix.stripHash basenix.colors.base01}";
+        clock = "${lib.getExe pkgs.clock-rs} --color \"${basenix.colors.base05}\"";
 
         tm = "tmux new-session -A -s main";
         tmc = "tmux new-session -A -s ";

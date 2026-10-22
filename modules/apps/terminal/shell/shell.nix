@@ -7,7 +7,7 @@
   flake.homeModules.kybe =
     {
       pkgs,
-      kylib,
+      basenix,
       config,
       ...
     }:
@@ -16,7 +16,7 @@
         enable = true;
         oh-my-zsh.enable = true;
         dotDir = "${config.xdg.configHome}/zsh";
-        initContent = kylib.colors.lib.substitute (builtins.readFile ./zshrc);
+        initContent = basenix.substitute (builtins.readFile ./zshrc);
         profileExtra = builtins.readFile ./zshrc;
       };
     };

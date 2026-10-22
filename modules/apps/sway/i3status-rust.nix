@@ -3,8 +3,8 @@
     {
       lib,
       pkgs,
-      kylib,
       config,
+      basenix,
       ...
     }:
     let
@@ -74,22 +74,21 @@
           icons = "awesome6";
           settings.theme = {
             theme = "bad-wolf";
-            overrides = with kylib.colors; {
+            overrides = with basenix.colors; {
               # BG
-              idle_bg = main;
-              alternating_tint_bg = main_alt;
+              idle_bg = base00;
+              alternating_tint_bg = base01;
 
-              good_bg = selected;
-              info_bg = selected;
-              warning_bg = selected;
+              good_bg = base0B;
+              info_bg = base0D;
+              warning_bg = base0F;
 
               # FG
-              idle_fg = text;
-              alternating_tint_fg = text;
-
-              good_fg = text;
-              info_fg = text;
-              warning_fg = text;
+              alternating_tint_fg = base05;
+              good_fg = base05;
+              idle_fg = base05;
+              info_fg = base05;
+              warning_fg = base05;
             };
           };
         };

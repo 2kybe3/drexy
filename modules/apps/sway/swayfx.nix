@@ -4,7 +4,7 @@
       lib,
       pkgs,
       self',
-      kylib,
+      basenix,
       config,
       inputs',
       ...
@@ -28,7 +28,7 @@
 
         checkConfig = false;
 
-        extraConfig = with kylib.colors; ''
+        extraConfig = with basenix.colors; ''
           blur enable
           blur_xray disable
           blur_passes 3
@@ -46,9 +46,9 @@
           default_border pixel 1
           default_floating_border pixel 1
 
-          client.focused #FFFFFF ${bright} #FFFFFF
-          client.focused_inactive #FFFFFF ${main_alt} #FFFFFF
-          client.unfocused #FFFFFF ${main} #FFFFFF
+          client.focused_inactive ${base05} ${base02} ${base05}
+          client.unfocused ${base05} ${base02} ${base05}
+          client.focused ${base05} ${base05} ${base05}
 
           seat * hide_cursor 3000
         '';

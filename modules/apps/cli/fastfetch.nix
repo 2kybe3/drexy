@@ -1,7 +1,7 @@
 {
   flake.homeModules.kybe =
     {
-      kylib,
+      basenix,
       ...
     }:
     {
@@ -10,20 +10,17 @@
         settings = {
           logo = {
             source = "nixos";
-            color = with kylib.colors; {
-              "1" = main;
-              "3" = main;
-              "5" = main;
+            color = with basenix.colors; {
+              "1" = base00;
+              "3" = base00;
+              "5" = base00;
 
-              "2" = bright;
-              "4" = bright;
-              "6" = bright;
+              "2" = base01;
+              "4" = base01;
+              "6" = base01;
             };
           };
-          display = {
-            color = kylib.colors.bright;
-            separator = " -> ";
-          };
+          display.separator = " -> ";
           modules = [
             "kernel"
             "uptime"

@@ -18,7 +18,7 @@
     {
       pkgs,
       self',
-      kylib,
+      basenix,
       ...
     }:
     {
@@ -27,16 +27,17 @@
         package = self'.packages.wiremix;
         settings = {
           fps = 75.0;
-          themes.default = with kylib.colors; {
-            dropdown_selected.fg = selected;
-            list_more.fg = main;
-            meter_active.fg = bright;
-            meter_center_active.fg = bright;
-            meter_overload.fg = red;
-            selector.fg = selected;
-            tab_marker.fg = selected;
-            tab_selected.fg = selected;
-            volume_filled.fg = bright;
+          themes.default = with basenix.colors; {
+            meter_overload.fg = base08;
+
+            dropdown_selected.fg = base05;
+            list_more.fg = base05;
+            meter_active.fg = base05;
+            meter_center_active.fg = base05;
+            selector.fg = base05;
+            tab_marker.fg = base05;
+            tab_selected.fg = base05;
+            volume_filled.fg = base05;
           };
         };
       };

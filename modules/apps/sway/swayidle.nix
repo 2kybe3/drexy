@@ -31,7 +31,6 @@
     {
       lib,
       pkgs,
-      kylib,
       self',
       config,
       secrets,

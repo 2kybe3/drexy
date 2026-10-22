@@ -15,21 +15,21 @@
     },
     "theme": {
         "colors": {
-            "sidebar": "@main@",
-            "frame": "@main@",
-            "tab_background_text": "@text@",
-            "toolbar": "@main@",
-            "toolbar_field": "@main@",
-            "toolbar_field_text": "@text@",
-            "toolbar_field_border": "@bright@",
-            "toolbar_bottom_separator": "@bright@",
-            "icons": "@bright@",
-            "tab_line": "@bright@",
-            "popup": "@main@",
-            "popup_text": "@text@",
-            "popup_border": "@main_alt@",
-            "ntp_background": "@main@",
-            "ntp_text": "@text@"
+            "sidebar": "@base00@",
+            "frame": "@base00@",
+            "tab_background_text": "@base05@",
+            "toolbar": "@base00@",
+            "toolbar_field": "@base00@",
+            "toolbar_field_text": "@base05@",
+            "toolbar_field_border": "@base06@",
+            "toolbar_bottom_separator": "@base06@",
+            "icons": "@base06@",
+            "tab_line": "@base06@",
+            "popup": "@base00@",
+            "popup_text": "@base05@",
+            "popup_border": "@base00@",
+            "ntp_background": "@base00@",
+            "ntp_text": "@base05@"
         }
     }
 }
