@@ -7,6 +7,7 @@
       ...
     }:
     {
+      # TODO: remove when home-manager updates there path (lbirewolf for some reason ignores ~/.librewolf/librewolf.overrides.cfg)
       home.file.".config/librewolf/librewolf/librewolf.overrides.cfg".source =
         config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.librewolf/librewolf.overrides.cfg";
 
@@ -28,33 +29,37 @@
         policies = {
           DisplayBookmarksToolbar = "newtab";
 
-          ExtensionSettings = {
-            "*".installation_mode = "blocked";
-            "kybe@kybe.xyz" = {
-              install_url = "file:${self'.packages.firefox-theme}/theme.xpi";
-              installation_mode = "force_installed";
+          ExtensionSettings =
+            let
+              theme = self'.packages.firefox-theme;
+            in
+            {
+              "*".installation_mode = "blocked";
+              theme.passthru.addonId = {
+                install_url = "file:${theme.file}";
+                installation_mode = "force_installed";
+              };
+              "addon@darkreader.org" = {
+                install_url = "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi";
+                installation_mode = "force_installed";
+              };
+              "uBlock0@raymondhill.net" = {
+                install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
+                installation_mode = "force_installed";
+              };
+              "jid1-MnnxcxisBPnSXQ@jetpack" = {
+                install_url = "https://addons.mozilla.org/firefox/downloads/latest/privacy-badger17/latest.xpi";
+                installation_mode = "force_installed";
+              };
+              "keepassxc-browser@keepassxc.org" = {
+                install_url = "https://addons.mozilla.org/firefox/downloads/latest/keepassxc-browser/latest.xpi";
+                installation_mode = "force_installed";
+              };
+              "@testpilot-containers" = {
+                install_url = "https://addons.mozilla.org/firefox/downloads/latest/multi-account-containers/latest.xpi";
+                installation_mode = "force_installed";
+              };
             };
-            "addon@darkreader.org" = {
-              install_url = "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi";
-              installation_mode = "force_installed";
-            };
-            "uBlock0@raymondhill.net" = {
-              install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
-              installation_mode = "force_installed";
-            };
-            "jid1-MnnxcxisBPnSXQ@jetpack" = {
-              install_url = "https://addons.mozilla.org/firefox/downloads/latest/privacy-badger17/latest.xpi";
-              installation_mode = "force_installed";
-            };
-            "keepassxc-browser@keepassxc.org" = {
-              install_url = "https://addons.mozilla.org/firefox/downloads/latest/keepassxc-browser/latest.xpi";
-              installation_mode = "force_installed";
-            };
-            "@testpilot-containers" = {
-              install_url = "https://addons.mozilla.org/firefox/downloads/latest/multi-account-containers/latest.xpi";
-              installation_mode = "force_installed";
-            };
-          };
 
           SearchEngines = {
             PreventInstalls = true;
@@ -102,17 +107,26 @@
             Remove = [
               "Mojeek"
               "Startpage"
+              "Wikipedia (en)"
             ];
           };
         };
 
         settings = {
+          # anti fingerprinting
           "privacy.fingerprintingProtection" = true;
           "privacy.resistFingerprinting.letterboxing" = true;
 
           "geo.enabled" = false;
           "dom.battery.enabled" = false;
 
+          # disable autoplay
+          "media.autoplay.blocking_policy" = 2;
+
+          # WebGL
+          "librewolf.webgl.prompt" = true;
+
+          # theme plugin
           "xpinstall.signatures.required" = false;
         };
       };
