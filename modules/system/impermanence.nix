@@ -12,8 +12,6 @@
         "/var/lib/bluetooth"
         "/var/lib/systemd/coredump"
         "/etc/NetworkManager/system-connections"
-
-        # TODO when adding: /var/lib/docker, /var/lib/libvirt
       ];
       files = [
         "/etc/machine-id"

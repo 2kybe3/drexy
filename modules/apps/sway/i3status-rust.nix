@@ -18,6 +18,23 @@
     {
       sops.secrets.i3status-github-notifications.sopsFile = "${secrets}/home/i3status-rust/github-notifications.yaml";
 
+      wayland.windowManager.sway.config.bars = [
+        {
+          position = "top";
+          workspaceButtons = false;
+          workspaceNumbers = false;
+          statusCommand = "${lib.getExe config.programs.i3status-rust.package} config-default.toml";
+          trayOutput = "none";
+
+          fonts = {
+            names = [ "monospace" ];
+            size = 8.0;
+          };
+
+          colors.background = "#000000";
+        }
+      ];
+
       programs.i3status-rust = {
         enable = true;
         package = pkgs.symlinkJoin {

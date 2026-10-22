@@ -72,24 +72,6 @@
 
           window.titlebar = false;
 
-          # TODO: move to i3status-rust config
-          bars = [
-            {
-              position = "top";
-              workspaceButtons = false;
-              workspaceNumbers = false;
-              statusCommand = "${lib.getExe config.programs.i3status-rust.package} config-default.toml";
-              trayOutput = "none";
-
-              fonts = {
-                names = [ "monospace" ];
-                size = 8.0;
-              };
-
-              colors.background = "#000000";
-            }
-          ];
-
           # TODO: stuff
           keybindings = {
             "${modifier}+p" = "exec ${lib.getExe self'.packages.kymenu-tmux-projects}";

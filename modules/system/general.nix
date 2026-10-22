@@ -9,11 +9,6 @@
       getty.helpLine = lib.mkForce "";
     };
 
-    virtualisation.podman = {
-      enable = true;
-      dockerCompat = true;
-    };
-
     i18n = {
       defaultLocale = "en_US.UTF-8";
       extraLocaleSettings = {
