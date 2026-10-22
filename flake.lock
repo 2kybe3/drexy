@@ -409,18 +409,14 @@
     "secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1792621360,
-        "narHash": "sha256-5KzAcPScM6jlzSwRzHxU3HwmuaPTxuTRfVreg/Dk/2Y=",
-        "ref": "refs/heads/main",
-        "rev": "e4dfc8f8107a8ffbe44ba186982e8b7343f651fb",
-        "revCount": 1,
-        "type": "git",
-        "url": "file:./secrets"
+        "path": "secrets",
+        "type": "path"
       },
       "original": {
-        "type": "git",
-        "url": "file:./secrets"
-      }
+        "path": "secrets",
+        "type": "path"
+      },
+      "parent": []
     },
     "sops-nix": {
       "inputs": {

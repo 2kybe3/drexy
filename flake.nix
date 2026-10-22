@@ -1,5 +1,7 @@
 {
   inputs = {
+    self.submodules = true;
+
     # core
     nixpkgs.url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst";
 
@@ -38,7 +40,7 @@
 
     # secret management
     secrets = {
-      url = "git+file:./secrets";
+      url = ./secrets;
       flake = false;
     };
 
