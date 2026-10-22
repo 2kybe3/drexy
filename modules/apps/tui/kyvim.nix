@@ -15,6 +15,7 @@
     {
       home = {
         packages = [ kyvim ];
+        shellAliases.n = "${lib.getExe kyvim}";
         sessionVariables.EDITOR = "${lib.getExe kyvim}";
       };
     };
