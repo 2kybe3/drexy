@@ -1,4 +1,4 @@
-{secrets,...}:{
+{ secrets, ... }: {
   flake.nixosModules.networking =
     {
       pkgs,

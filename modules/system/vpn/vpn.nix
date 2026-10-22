@@ -1,4 +1,4 @@
-{secrets,...}:{
+{ secrets, ... }: {
   flake.nixosModules.system =
     {
       lib,

@@ -37,11 +37,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792522401,
-        "narHash": "sha256-r3C+5Gk2ex6Q2ZX3tgTbOHyKBYLYD+bmunnvebErqZA=",
+        "lastModified": 1792526520,
+        "narHash": "sha256-3hSJlv8mUVnZPMWK2+CM7a9O+nR6Z4mCh27NfLCmTPc=",
         "owner": "nix-community",
         "repo": "disko",
-        "rev": "fb50c22daa522e9a155ff18f9730ec6013e3fc7d",
+        "rev": "cedd626e11b635470fa6f9fdb8ad79b0075dd7f9",
         "type": "github"
       },
       "original": {
@@ -149,11 +149,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1792495086,
-        "narHash": "sha256-TyoYH983Nsc++1scw0SoOEKshPSJWJDxK7tTmuZ974M=",
+        "lastModified": 1792605213,
+        "narHash": "sha256-J73EBU30r2hXvHCcBtaigQDAIu/GGPYk1nc6P9THcmg=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "ec80131710bffcdf3b8498cf41f3a0579833b023",
+        "rev": "ab97a5d09e0f2aa7339cfd35ec5824fd6653e27c",
         "type": "github"
       },
       "original": {
@@ -205,11 +205,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1792146956,
-        "narHash": "sha256-bdHPJy4b8VO9KFs/rs3CGyCvwPdt6XBs/3358V3jrLg=",
+        "lastModified": 1792607513,
+        "narHash": "sha256-vAqMUQkVbIbNqb+OlKpww+wSqFHVhf9mt48gqm45z20=",
         "ref": "refs/heads/main",
-        "rev": "87c9ac4b1a21c460bf28b08e47071392b7d8fc51",
-        "revCount": 124,
+        "rev": "38cc6fb5110c7c8cc9d9f0cbbb4e6287ce5987ca",
+        "revCount": 125,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kymenu.git"
       },
@@ -247,11 +247,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1792330486,
-        "narHash": "sha256-badMK1VeKcrRyUP2nJBnhqLiDxjmaLe11bRyFxGot98=",
+        "lastModified": 1792631861,
+        "narHash": "sha256-FQ1EClFluQmmzUYC94i9cb5oxfdt1DDLcf8kmkyD8xg=",
         "ref": "refs/heads/main",
-        "rev": "649007cc556ef1b3bf6929b57c97d792dd7ff701",
-        "revCount": 107,
+        "rev": "9544eccf3d7a8d0fca7b87215d0c83be8775a17a",
+        "revCount": 108,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kyvim.git"
       },
@@ -372,11 +372,11 @@
     },
     "nixpkgs_6": {
       "locked": {
-        "lastModified": 1792488032,
-        "narHash": "sha256-jWdazKTNUOJQ3KE+9BAvpBOo6THrD0Qyb3S8F2GduUI=",
-        "rev": "e513db7b0a65def6f6e17bb55195dfe510871944",
+        "lastModified": 1792506237,
+        "narHash": "sha256-hVMDyAXU0kxRuG3GygbZkzf5x+aBNEC0NYEJ6KwHtD4=",
+        "rev": "5adc50831c259f87faeb09ddf930d43597197473",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.11pre1097569.e513db7b0a65/nixexprs.tar.zst"
+        "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.11pre1097770.5adc50831c25/nixexprs.tar.zst"
       },
       "original": {
         "type": "tarball",
@@ -488,10 +488,10 @@
     "secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1792616978,
-        "narHash": "sha256-/v+pLz7c634Ynigg5+ajfnoE9m+13F++mRPdIpqhvNU=",
+        "lastModified": 1792621360,
+        "narHash": "sha256-5KzAcPScM6jlzSwRzHxU3HwmuaPTxuTRfVreg/Dk/2Y=",
         "ref": "refs/heads/main",
-        "rev": "3ec20075fa2475606f4285de23a0485899b87417",
+        "rev": "e4dfc8f8107a8ffbe44ba186982e8b7343f651fb",
         "revCount": 1,
         "type": "git",
         "url": "file:./secrets"
