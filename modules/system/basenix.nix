@@ -14,12 +14,9 @@ in
   };
 
   flake.homeModules.kybe =
-    { pkgs, ... }:
-    let
-      basenix = inputs.basenix.lib.mkLib { inherit theme pkgs; };
-    in
+    { pkgs, inputs', ... }:
     {
-      _module.args.basenix = basenix;
-      home.packages = [ basenix ];
+      _module.args.basenix = inputs.basenix.lib.mkLib { inherit theme pkgs; };
+      home.packages = [ inputs'.basenix.packages.default ];
     };
 }

@@ -1,5 +1,6 @@
 {
-  flake.homeModules.kybe = {
+  flake.homeModules.kybe = { pkgs, ... }: {
+    home.packages = [ pkgs.nerd-fonts.fira-code ];
     gtk = {
       enable = true;
       colorScheme = "dark";

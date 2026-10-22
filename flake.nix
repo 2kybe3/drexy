@@ -40,7 +40,7 @@
 
     # secret management
     secrets = {
-      url = ./secrets;
+      url = "git+ssh://git@gitc.kybe.xyz/2kybe3/drexy-secrets.git";
       flake = false;
     };
 

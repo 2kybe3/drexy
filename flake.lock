@@ -13,11 +13,11 @@
         "treefmt-nix": []
       },
       "locked": {
-        "lastModified": 1792674453,
-        "narHash": "sha256-1yBXlZ32jOb4ipyF+9ISDasjq8Ucu4kwBYiErcHBNGA=",
+        "lastModified": 1792689289,
+        "narHash": "sha256-0tmm95nUm2mApmTGl4u2yiTUed7CG9Lg1B6GKFP7DPc=",
         "ref": "refs/heads/main",
-        "rev": "c99840740456106728b47bc06bf17aef42bac741",
-        "revCount": 1,
+        "rev": "fcec3a23329e14bd537689fd76fe238964c992e4",
+        "revCount": 2,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/basenix.git"
       },
@@ -155,11 +155,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792668857,
-        "narHash": "sha256-chUrnAqBhBLvXBUsLFxFYBIl8c0GWp06wdjmAMS8l+U=",
+        "lastModified": 1792703141,
+        "narHash": "sha256-3X34FaSeMJXMx8CK/BN6sZ9knwNauuiJXQhLM+bQQuI=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "cb7de2c7e589afe7531d4832c71ad4df144624ea",
+        "rev": "6750249c69969d09d952efaf3fab88a2bdac7ec6",
         "type": "github"
       },
       "original": {
@@ -409,14 +409,18 @@
     "secrets": {
       "flake": false,
       "locked": {
-        "path": "secrets",
-        "type": "path"
+        "lastModified": 1792621360,
+        "narHash": "sha256-5KzAcPScM6jlzSwRzHxU3HwmuaPTxuTRfVreg/Dk/2Y=",
+        "ref": "refs/heads/main",
+        "rev": "e4dfc8f8107a8ffbe44ba186982e8b7343f651fb",
+        "revCount": 1,
+        "type": "git",
+        "url": "ssh://git@gitc.kybe.xyz/2kybe3/drexy-secrets.git"
       },
       "original": {
-        "path": "secrets",
-        "type": "path"
-      },
-      "parent": []
+        "type": "git",
+        "url": "ssh://git@gitc.kybe.xyz/2kybe3/drexy-secrets.git"
+      }
     },
     "sops-nix": {
       "inputs": {
