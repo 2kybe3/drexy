@@ -18,6 +18,7 @@
             "no-clipboard-copy"
           ];
           confirm-close-surface = false;
+          foreground = basenix.colors.base05;
           palette = with basenix.colors; [
             "0=${base00}"
             "1=${base08}"

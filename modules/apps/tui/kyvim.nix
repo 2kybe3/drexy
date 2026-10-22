@@ -1,19 +1,20 @@
-{
+{ inputs, ... }: {
   flake.homeModules.kybe =
     {
       lib,
-      inputs,
+      pkgs,
       basenix,
       ...
     }:
     let
-      lib = inputs.kyvim.lib.mkPackage {
-        theme = {
-          name = "kybe";
-          theme = basenix.vimTheme;
-        };
-      };
-      kyvim = lib.wrapped;
+      kyvim =
+        (inputs.kyvim.lib.mkPackage {
+          inherit pkgs;
+          theme = {
+            name = "kybe";
+            theme = basenix.vimTheme "kybe";
+          };
+        }).wrapped;
     in
     {
       home = {

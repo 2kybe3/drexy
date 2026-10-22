@@ -1,3 +1,4 @@
+# https://github.com/tinted-theming/base24/blob/main/styling.md
 { inputs, ... }:
 let
   # https://github.com/tinted-theming/schemes/tree/spec-0.11/base24
