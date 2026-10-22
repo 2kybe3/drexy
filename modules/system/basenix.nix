@@ -13,7 +13,13 @@ in
     _module.args.basenix = inputs.basenix.lib.mkLib { inherit theme pkgs; };
   };
 
-  flake.homeModules.kybe = { pkgs, ... }: {
-    _module.args.basenix = inputs.basenix.lib.mkLib { inherit theme pkgs; };
-  };
+  flake.homeModules.kybe =
+    { pkgs, ... }:
+    let
+      basenix = inputs.basenix.lib.mkLib { inherit theme pkgs; };
+    in
+    {
+      _module.args.basenix = basenix;
+      home.packages = [ basenix ];
+    };
 }
