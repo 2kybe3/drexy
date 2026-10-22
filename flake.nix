@@ -1,7 +1,10 @@
 {
   inputs = {
     nixpkgs.url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst";
-    home-manager.url = "github:nix-community/home-manager";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:denful/import-tree";
@@ -28,13 +31,45 @@
       };
     };
 
-    nix-index-database.url = "github:nix-community/nix-index-database";
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    kyvim.url = "git+https://git.kybe.xyz/2kybe3/kyvim.git";
-    kymenu.url = "git+https://git.kybe.xyz/2kybe3/kymenu.git";
-    kymenu-extras.url = "git+https://git.kybe.xyz/2kybe3/kymenu-extras.git";
+    kyvim = {
+      url = "git+https://git.kybe.xyz/2kybe3/kyvim.git";
+      inputs = {
+        basenix.follows = "basenix";
+        nixpkgs.follows = "nixpkgs";
+        nixvim.inputs.flake-parts.follows = "flake-parts";
+      };
+    };
 
-    basenix.url = "git+https://git.kybe.xyz/2kybe3/basenix.git";
+    kymenu = {
+      url = "git+https://git.kybe.xyz/2kybe3/kymenu.git";
+      inputs = {
+        rust-overlay.follows = "rust-overlay";
+        nixpkgs.follows = "nixpkgs";
+        treefmt-nix.follows = "";
+      };
+    };
+    kymenu-extras = {
+      url = "git+https://git.kybe.xyz/2kybe3/kymenu-extras.git";
+      inputs = {
+        rust-overlay.follows = "rust-overlay";
+        nixpkgs.follows = "nixpkgs";
+        treefmt-nix.follows = "";
+      };
+    };
+
+    basenix = {
+      url = "git+https://git.kybe.xyz/2kybe3/basenix.git";
+      inputs = {
+        flake-parts.follows = "flake-parts";
+        nixpkgs.follows = "nixpkgs";
+        treefmt-nix.follows = "";
+      };
+    };
 
     rust-overlay = {
       url = "github:oxalica/rust-overlay";

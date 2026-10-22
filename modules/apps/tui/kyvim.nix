@@ -9,11 +9,7 @@
     let
       kyvim =
         (inputs.kyvim.lib.mkPackage {
-          inherit pkgs;
-          theme = {
-            name = "kybe";
-            theme = basenix.vimTheme "kybe";
-          };
+          inherit pkgs basenix;
         }).wrapped;
     in
     {
