@@ -67,6 +67,11 @@
       };
     };
 
+    black-metal = {
+      url = "github:metalelf0/base16-black-metal-scheme";
+      flake = false;
+    };
+
     # personal tools
 
     kyvim = {

@@ -7,7 +7,7 @@
     stylix = {
       enable = true;
       targets.qt.enable = true;
-      base16Scheme = basenix.yaml;
+      base16Scheme = basenix.full;
       fonts = {
         monospace = {
           name = "FiraCode Nerd Font";

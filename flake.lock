@@ -81,17 +81,33 @@
         "treefmt-nix": []
       },
       "locked": {
-        "lastModified": 1792689289,
-        "narHash": "sha256-0tmm95nUm2mApmTGl4u2yiTUed7CG9Lg1B6GKFP7DPc=",
+        "lastModified": 1792778569,
+        "narHash": "sha256-SJvgu1H2dM+zudx7KI/kuZL3pwIjEHxJu2LdmLPL2NE=",
         "ref": "refs/heads/main",
-        "rev": "fcec3a23329e14bd537689fd76fe238964c992e4",
-        "revCount": 2,
+        "rev": "2d4e9ab65757cb47c67244d353a5b37195a8464c",
+        "revCount": 12,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/basenix.git"
       },
       "original": {
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/basenix.git"
+      }
+    },
+    "black-metal": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1585330710,
+        "narHash": "sha256-ctsMdfUpqVZfqtg4paYg4oCataRHoapxSiYRsi0lwhI=",
+        "owner": "metalelf0",
+        "repo": "base16-black-metal-scheme",
+        "rev": "c7a32bec8105a1ceddb9fcc90b713dabde5e7e5e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "metalelf0",
+        "repo": "base16-black-metal-scheme",
+        "type": "github"
       }
     },
     "crane": {
@@ -274,11 +290,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792769188,
-        "narHash": "sha256-g4vKmp/alqd48uhqWbJpCm1eL1UHDDH3/K6G7m/O1Fc=",
+        "lastModified": 1792773325,
+        "narHash": "sha256-bvba9Lts8r8d15MdIDMwJGDxLtJiTlasKtAZyhTDzXk=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "0cf43f39990c5ec16dd27ce211324cdfd2e8d27f",
+        "rev": "6d9655f76459099b0db2f57b13563729c7022aa7",
         "type": "github"
       },
       "original": {
@@ -385,11 +401,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1792771637,
-        "narHash": "sha256-Z3hZuDU3iXzCCiO4RxL9y313yfF6CXAnJEIn1Dny59A=",
+        "lastModified": 1792776091,
+        "narHash": "sha256-g7OsVkO5BKfZMtPs10RqTJLuN0IXsoKnQnStQh7rMdg=",
         "ref": "refs/heads/main",
-        "rev": "f50e8a56040f487d9bbf1ddf7fe02371fd50073c",
-        "revCount": 115,
+        "rev": "c18672fbd8ecc33d4191d7e96245e94d727589c3",
+        "revCount": 116,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kyvim.git"
       },
@@ -499,6 +515,7 @@
     "root": {
       "inputs": {
         "basenix": "basenix",
+        "black-metal": "black-metal",
         "disko": "disko",
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
@@ -547,6 +564,7 @@
       },
       "original": {
         "owner": "tinted-theming",
+        "ref": "spec-0.11",
         "repo": "schemes",
         "type": "github"
       }
