@@ -60,25 +60,25 @@
             default = "ddg";
             engines = {
               "MyNixOS" = {
-                definedAliases = "@nix";
+                definedAliases = [ "@nix" ];
                 urls = [ { template = "https://mynixos.com/search?q={searchTerms}"; } ];
               };
               "NixMerge" = {
-                definedAliases = "@nm";
+                definedAliases = [ "@nm" ];
                 urls = [ { template = "https://nixpk.gs/pr-tracker.html?pr={searchTerms}"; } ];
               };
               "HydraPackage" = {
-                definedAliases = "@hp";
+                definedAliases = [ "@hp" ];
                 urls = [
                   { template = "https://hydra.nixos.org/job/nixpkgs/unstable/{searchTerms}.x86_64-linux"; }
                 ];
               };
               "Youtube Music" = {
-                definedAliases = "@ym";
+                definedAliases = [ "@ym" ];
                 urls = [ { template = "https://music.youtube.com/search?q={searchTerms}"; } ];
               };
               "Youtube" = {
-                definedAliases = "@yt";
+                definedAliases = [ "@yt" ];
                 urls = [ { template = "https://www.youtube.com/results?search_query={searchTerms}"; } ];
               };
             };
