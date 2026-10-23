@@ -6,6 +6,7 @@
 
     stylix = {
       enable = true;
+      targets.qt.enable = true;
       base16Scheme = basenix.yaml;
       fonts = {
         monospace = {
@@ -29,5 +30,10 @@
         };
       };
     };
+  };
+
+  flake.homeModules.kybe = { lib, pkgs, ... }: {
+    gtk.enable = true;
+    qt.enable = true;
   };
 }

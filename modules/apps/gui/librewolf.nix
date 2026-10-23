@@ -57,6 +57,7 @@
             };
           };
           search = {
+            force = true;
             default = "ddg";
             engines = {
               "MyNixOS" = {
