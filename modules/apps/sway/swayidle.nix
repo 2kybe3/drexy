@@ -6,8 +6,8 @@
       ...
     }:
     {
-      packages.swaylock = pkgs.writeShellApplication {
-        name = "swaylock";
+      packages.swaylock-wrapper = pkgs.writeShellApplication {
+        name = "swaylock-wrapper";
 
         derivationArgs = {
           strictDeps = true;
@@ -42,10 +42,10 @@
         timeouts = [
           {
             timeout = 300;
-            command = lib.getExe self'.packages.swaylock;
+            command = lib.getExe self'.packages.swaylock-wrapper;
           }
         ];
-        events.before-sleep = lib.getExe self'.packages.swaylock;
+        events.before-sleep = lib.getExe self'.packages.swaylock-wrapper;
       };
     };
 }

@@ -49,6 +49,24 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # theming
+    basenix = {
+      url = "git+https://git.kybe.xyz/2kybe3/basenix.git";
+      inputs = {
+        flake-parts.follows = "flake-parts";
+        nixpkgs.follows = "nixpkgs";
+        treefmt-nix.follows = "";
+      };
+    };
+
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs = {
+        flake-parts.follows = "flake-parts";
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
+
     # personal tools
 
     kyvim = {
@@ -72,15 +90,6 @@
       url = "git+https://git.kybe.xyz/2kybe3/kymenu-extras.git";
       inputs = {
         rust-overlay.follows = "rust-overlay";
-        nixpkgs.follows = "nixpkgs";
-        treefmt-nix.follows = "";
-      };
-    };
-
-    basenix = {
-      url = "git+https://git.kybe.xyz/2kybe3/basenix.git";
-      inputs = {
-        flake-parts.follows = "flake-parts";
         nixpkgs.follows = "nixpkgs";
         treefmt-nix.follows = "";
       };
