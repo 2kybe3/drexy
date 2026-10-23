@@ -3,11 +3,12 @@
 let
   # https://github.com/tinted-theming/schemes/tree/spec-0.11/base24
 
-  # theme = "dracula";
   themeFile = "${inputs.black-metal}/black-metal-dark-funeral.yaml";
-
-  theme = null;
+  # themeFile = "${inputs.basenix.inputs.schemas}/base16/nord.yaml";
   # themeFile = null;
+
+  # theme = "nord";
+  theme = null;
 in
 {
   perSystem = { pkgs, ... }: {

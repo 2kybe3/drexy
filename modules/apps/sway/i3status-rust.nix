@@ -96,16 +96,17 @@
               idle_bg = base00;
               alternating_tint_bg = base01;
 
-              good_bg = base0B;
-              info_bg = base0D;
-              warning_bg = base0F;
+              good_bg = base00;
+              info_bg = base00;
+              warning_bg = base00;
+
+              good_fg = base0B;
+              info_fg = base0D;
+              warning_fg = base0F;
 
               # FG
               alternating_tint_fg = base05;
-              good_fg = base05;
               idle_fg = base05;
-              info_fg = base05;
-              warning_fg = base05;
             };
           };
         };
