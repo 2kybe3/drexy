@@ -15,7 +15,6 @@
           cryptsetup
           ffmpeg
           gimp
-          imv
           jdk25
           jq
           just

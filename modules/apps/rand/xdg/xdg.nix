@@ -2,6 +2,7 @@
   flake.homeModules.kybe =
     {
       pkgs,
+      config,
       ...
     }:
     {
@@ -11,14 +12,13 @@
 
         mimeApps = {
           enable = true;
-          associations.added = {
-            "application/pdf" = "librewolf.desktop";
-          };
           defaultApplicationPackages = with pkgs; [
+            config.programs.librewolf.package
+            config.programs.zathura.package
+            config.programs.vesktop.package
+            config.programs.imv.package
+
             kdePackages.dolphin
-            librewolf
-            vesktop # x-scheme-handler/discord
-            imv
           ];
         };
 

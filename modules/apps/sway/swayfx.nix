@@ -13,13 +13,10 @@
       modifier = "Mod4"; # Super Key
     in
     {
-      home = {
-        packages = with pkgs; [ wl-clipboard-rs ];
-        sessionVariables = {
-          GTK_IM_MODULE = "gtk-im-context-simple";
-          SWAY_UNSUPPORTED_GPU = "true";
-          _JAVA_AWT_WM_NONREPARENTING = "1";
-        };
+      home.sessionVariables = {
+        GTK_IM_MODULE = "gtk-im-context-simple";
+        SWAY_UNSUPPORTED_GPU = "true";
+        _JAVA_AWT_WM_NONREPARENTING = "1";
       };
 
       wayland.windowManager.sway = {
@@ -58,7 +55,7 @@
 
           output.HDMI-A-1 = {
             mode = "1920x1080@75Hz";
-            bg = "${./wallpapers/black_hole.png} fill";
+            bg = "${./wallpapers/creation.png} fill";
           };
 
           defaultWorkspace = "workspace number 3";
