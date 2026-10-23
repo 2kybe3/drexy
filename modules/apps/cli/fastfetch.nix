@@ -11,13 +11,13 @@
           logo = {
             source = "nixos";
             color = with basenix.colors; {
-              "1" = base00;
-              "3" = base00;
-              "5" = base00;
+              "1" = base0C;
+              "3" = base0C;
+              "5" = base0C;
 
-              "2" = base01;
-              "4" = base01;
-              "6" = base01;
+              "2" = base0D;
+              "4" = base0D;
+              "6" = base0D;
             };
           };
           display.separator = " -> ";

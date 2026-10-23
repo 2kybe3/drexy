@@ -12,6 +12,7 @@
     in
     {
       home.shellAliases = {
+        nd = "nix develop -c $SHELL";
         ls = "${lib.getExe pkgs.eza}";
 
         ears = "bluetoothctl connect ${headPhones}";
@@ -22,10 +23,9 @@
         tm = "tmux new-session -A -s main";
         tmc = "tmux new-session -A -s ";
 
-        collect-garbage = "sudo nix-collect-garbage -d; nix-collect-garbage -d";
-
         flake-update = "nix flake update --flake .";
         switchy = "sudo nixos-rebuild switch --flake ${nixConfigPath}#$(hostname) --verbose";
+        collect-garbage = "sudo nix-collect-garbage -d; nix-collect-garbage -d";
       };
     };
 }
