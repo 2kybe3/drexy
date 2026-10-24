@@ -1,5 +1,3 @@
 { inputs, ... }: {
-  _module.args = {
-    secrets = "${inputs.secrets}";
-  };
+  _module.args.secrets = "${inputs.secrets}";
 }

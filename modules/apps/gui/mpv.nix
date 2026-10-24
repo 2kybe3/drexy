@@ -1,8 +1,6 @@
 {
-
   perSystem =
     {
-      lib,
       pkgs,
       ...
     }:

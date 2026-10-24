@@ -1,5 +1,5 @@
 { inputs, ... }: {
-  flake.homeModules.kybe = { pkgs, ... }: {
+  flake.homeModules.kybe = {
     imports = [
       inputs.nix-index-database.homeModules.default
     ];

@@ -20,7 +20,6 @@
           navigate = true;
           dark = true;
         };
-
         user = {
           name = "2kybe3";
           email = "kybe@kybe.xyz";

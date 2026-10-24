@@ -22,21 +22,19 @@
         };
       };
 
-      systemd.services = {
-        "kybe-wg-resolv" = {
-          after = [
-            "wireguard-kybe.xyz.target"
-            "network.target"
-            "wireguard-kybe.xyz.service"
-          ];
-          wants = [ "wireguard-kybe.xyz.service" ];
-          bindsTo = [ "wireguard-kybe.xyz.service" ];
-          wantedBy = [ "wireguard-kybe.xyz.service" ];
+      systemd.services."kybe-wg-resolv" = {
+        after = [
+          "wireguard-kybe.xyz.target"
+          "network.target"
+          "wireguard-kybe.xyz.service"
+        ];
+        wants = [ "wireguard-kybe.xyz.service" ];
+        bindsTo = [ "wireguard-kybe.xyz.service" ];
+        wantedBy = [ "wireguard-kybe.xyz.service" ];
 
-          serviceConfig = {
-            Type = "oneshot";
-            ExecStart = "${lib.getExe pkgs.bash} -c 'resolvectl dnsovertls kybe.xyz no; resolvectl dnssec kybe.xyz no; resolvectl domain kybe.xyz ~kybe.xyz ~black.void; resolvectl dns kybe.xyz 10.0.6.1;'";
-          };
+        serviceConfig = {
+          Type = "oneshot";
+          ExecStart = "${lib.getExe pkgs.bash} -c 'resolvectl dnsovertls kybe.xyz no; resolvectl dnssec kybe.xyz no; resolvectl domain kybe.xyz ~kybe.xyz ~black.void; resolvectl dns kybe.xyz 10.0.6.1;'";
         };
       };
 

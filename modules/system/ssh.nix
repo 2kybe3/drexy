@@ -1,10 +1,5 @@
 {
-  flake.nixosModules.system = { lib, pkgs, ... }: {
-    environment.persistence."/persistent".directories = [
-      "/etc/ssh"
-    ];
-
-    networking.firewall.allowedTCPPorts = [ 22 ];
+  flake.nixosModules.system = {
     services.openssh = {
       enable = true;
       openFirewall = true;
@@ -14,5 +9,9 @@
         PermitRootLogin = "no";
       };
     };
+
+    environment.persistence."/persistent".directories = [
+      "/etc/ssh"
+    ];
   };
 }

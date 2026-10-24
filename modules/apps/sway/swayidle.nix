@@ -1,7 +1,6 @@
 {
   perSystem =
     {
-      lib,
       pkgs,
       ...
     }:
@@ -32,8 +31,6 @@
       lib,
       pkgs,
       self',
-      config,
-      secrets,
       ...
     }:
     {

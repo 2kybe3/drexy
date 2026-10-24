@@ -4,16 +4,13 @@
     inputs.disko.flakeModules.default
   ];
 
-  flake.nixosModules.system = { pkgs, ... }: {
+  flake.nixosModules.system = {
     imports = [
       inputs.disko.nixosModules.default
     ];
 
     disko.devices = self.diskoConfigurations.drexy.disko.devices;
-    fileSystems = {
-      "/persistent".neededForBoot = true;
-      "/nix".neededForBoot = true;
-    };
+    fileSystems."/persistent".neededForBoot = true;
   };
 
   perSystem = { pkgs, inputs', ... }: {
@@ -24,68 +21,66 @@
     };
   };
 
-  flake.diskoConfigurations.drexy = {
-    disko.devices.disk.main = {
-      type = "disk";
-      device = "/dev/disk/by-id/ata-Crucial_CT525MX300SSD1_1642144EAB93";
-      content = {
-        type = "gpt";
-        partitions = {
-          ESP = {
-            size = "1G";
-            type = "EF00";
-            priority = 1;
-            content = {
-              type = "filesystem";
-              format = "vfat";
-              mountpoint = "/boot";
-              mountOptions = [ "umask=0077" ];
-            };
+  flake.diskoConfigurations.drexy.disko.devices.disk.main = {
+    type = "disk";
+    device = "/dev/disk/by-id/ata-Crucial_CT525MX300SSD1_1642144EAB93";
+    content = {
+      type = "gpt";
+      partitions = {
+        ESP = {
+          size = "1G";
+          type = "EF00";
+          priority = 1;
+          content = {
+            type = "filesystem";
+            format = "vfat";
+            mountpoint = "/boot";
+            mountOptions = [ "umask=0077" ];
           };
-          luks = {
-            size = "100%";
-            content = {
-              type = "luks";
-              name = "crypted";
-              settings.allowDiscards = true;
-              content =
-                let
-                  mountOptions = [
-                    "compress=zstd"
-                    "noatime"
-                  ];
-                in
-                {
-                  type = "btrfs";
-                  extraArgs = [ "-f" ];
+        };
+        luks = {
+          size = "100%";
+          content = {
+            type = "luks";
+            name = "crypted";
+            settings.allowDiscards = true;
+            content =
+              let
+                mountOptions = [
+                  "compress=zstd"
+                  "noatime"
+                ];
+              in
+              {
+                type = "btrfs";
+                extraArgs = [ "-f" ];
 
-                  mountpoint = "/roots";
-                  inherit mountOptions;
+                mountpoint = "/roots";
+                inherit mountOptions;
 
-                  subvolumes = {
-                    "@" = {
-                      mountpoint = "/";
-                      inherit mountOptions;
-                    };
-                    "@home" = {
-                      mountpoint = "/home";
-                      inherit mountOptions;
-                    };
-                    "@nix" = {
-                      mountpoint = "/nix";
-                      inherit mountOptions;
-                    };
-                    "@persistent" = {
-                      mountpoint = "/persistent";
-                      inherit mountOptions;
-                    };
-                    "@swap" = {
-                      mountpoint = "/.swapvol";
-                      swap.swapfile.size = "10G";
-                    };
+                subvolumes = {
+                  "@" = {
+                    mountpoint = "/";
+                    inherit mountOptions;
+                  };
+                  "@home" = {
+                    mountpoint = "/home";
+                    inherit mountOptions;
+                  };
+                  "@nix" = {
+                    mountpoint = "/nix";
+                    inherit mountOptions;
+                  };
+                  "@persistent" = {
+                    mountpoint = "/persistent";
+                    inherit mountOptions;
+                  };
+                  "@swap" = {
+                    mountpoint = "/.swapvol";
+                    swap.swapfile.size = "10G";
                   };
                 };
-            };
+              };
           };
         };
       };

@@ -1,19 +1,9 @@
 { secrets, ... }: {
   flake.homeModules.kybe =
     {
-      pkgs,
       config,
       ...
     }:
-    let
-      hostName = "kybe.xyz";
-
-      base = {
-        User = "kybe";
-        IdentitiesOnly = true;
-        IdentityFile = "${config.home.homeDirectory}/.ssh/kybe";
-      };
-    in
     {
       home.file.".ssh/kybe.pub".source = "${secrets}/home/ssh/kybe.pub";
 
@@ -28,12 +18,20 @@
       programs.ssh = {
         enable = true;
 
-        settings = {
-          "server" = base // {
-            HostName = "ip.${hostName}";
+        settings =
+          let
+            base = {
+              User = "kybe";
+              IdentitiesOnly = true;
+              IdentityFile = "${config.home.homeDirectory}/.ssh/kybe";
+            };
+          in
+          {
+            "server" = base // {
+              HostName = "ip.kybe.xyz";
+            };
+            "gitc.kybe.xyz" = base;
           };
-          "gitc.kybe.xyz" = base;
-        };
 
         enableDefaultConfig = false;
       };

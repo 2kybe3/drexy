@@ -14,6 +14,9 @@
         dotnet-sdk
         gcc
         go
+        jdk25
+        jq
+        just
         python3
         rust-bin.nightly.latest.default
 

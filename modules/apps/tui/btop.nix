@@ -1,7 +1,6 @@
 {
   flake.homeModules.kybe =
     {
-      lib,
       pkgs,
       ...
     }:

@@ -4,9 +4,9 @@
       lib,
       pkgs,
       self',
-      basenix,
       config,
       inputs',
+      basenix,
       ...
     }:
     let

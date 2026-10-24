@@ -1,5 +1,11 @@
 { secrets, ... }: {
   flake.homeModules.kybe = { pkgs, config, ... }: {
+    home.packages = with pkgs; [
+      nix-output-monitor
+      attic-client
+      nix-update
+    ];
+
     sops.secrets = {
       nix-extra-conf = {
         sopsFile = "${secrets}/home/nix/extra-conf.txt";
@@ -11,11 +17,9 @@
       };
     };
 
-    nix = {
-      extraOptions = ''
-        netrc-file = ${config.sops.secrets.nix-netrc.path}
-        !include ${config.sops.secrets.nix-extra-conf.path}
-      '';
-    };
+    nix.extraOptions = ''
+      netrc-file = ${config.sops.secrets.nix-netrc.path}
+      !include ${config.sops.secrets.nix-extra-conf.path}
+    '';
   };
 }

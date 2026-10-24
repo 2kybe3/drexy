@@ -27,11 +27,6 @@
         inputs.sops-nix.nixosModules.sops
       ];
 
-      environment.systemPackages = with pkgs; [
-        sops
-        age
-      ];
-
       sops.age.keyFile = "/nix/keys/system-drexy";
     };
 }

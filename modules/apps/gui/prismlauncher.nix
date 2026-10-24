@@ -2,14 +2,14 @@
   flake.homeModules.kybe = { pkgs, ... }: {
     programs.prismlauncher = {
       enable = true;
-      package = (
-        pkgs.prismlauncher.override {
+      package =
+        with pkgs;
+        (prismlauncher.override {
           jdks = [
-            pkgs.jdk21
-            pkgs.jdk25
+            jdk21
+            jdk25
           ];
-        }
-      );
+        });
     };
   };
 }

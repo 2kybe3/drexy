@@ -1,8 +1,6 @@
 {
   flake.homeModules.kybe =
     {
-      pkgs,
-      config,
       hostName,
       ...
     }:

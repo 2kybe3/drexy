@@ -1,10 +1,8 @@
 {
-  flake.nixosModules.system = { pkgs, ... }: {
-    environment.pathsToLink = [
-      "/share/xdg-desktop-portal"
-      "/share/applications"
-    ];
-  };
+  flake.nixosModules.system.environment.pathsToLink = [
+    "/share/xdg-desktop-portal"
+    "/share/applications"
+  ];
 
   flake.homeModules.kybe =
     {

@@ -1,5 +1,5 @@
 {
-  flake.homeModules.kybe = { config, basenix, ... }: {
+  flake.homeModules.kybe = { basenix, ... }: {
     programs.imv = {
       enable = true;
       settings.options = {

@@ -2,18 +2,18 @@
   flake.homeModules.kybe =
     {
       lib,
-      pkgs,
+      config,
       basenix,
       ...
     }:
     {
-      home.sessionVariables.TERMINAL = "${lib.getExe pkgs.ghostty}";
+      home.sessionVariables.TERMINAL = "${lib.getExe config.programs.ghostty.package}";
 
       programs.ghostty = {
         enable = true;
         settings = {
           font-size = 11;
-          background-opacity = 0.0;
+          background-opacity = 0.9;
           app-notifications = [
             "no-clipboard-copy"
           ];

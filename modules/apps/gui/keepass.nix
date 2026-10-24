@@ -1,5 +1,5 @@
 {
-  flake.homeModules.kybe = { pkgs, config, ... }: {
+  flake.homeModules.kybe = { config, ... }: {
     programs.keepassxc = {
       enable = true;
       settings = {

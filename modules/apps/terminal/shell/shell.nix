@@ -6,7 +6,6 @@
 
   flake.homeModules.kybe =
     {
-      pkgs,
       basenix,
       config,
       ...

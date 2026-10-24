@@ -1,10 +1,7 @@
 {
   flake.nixosModules.system =
     {
-      lib,
       pkgs,
-      config,
-      secrets,
       ...
     }:
     let

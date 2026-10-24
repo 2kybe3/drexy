@@ -1,5 +1,5 @@
 { secrets, ... }: {
-  flake.nixosModules.system = { pkgs, config, ... }: {
+  flake.nixosModules.system = { config, ... }: {
     sops.secrets = {
       root = {
         sopsFile = "${secrets}/system/users/password.yaml";

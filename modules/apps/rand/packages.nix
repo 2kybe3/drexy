@@ -15,9 +15,6 @@
           cryptsetup
           ffmpeg
           gimp
-          jdk25
-          jq
-          just
 
           # keep-sorted end
         ]

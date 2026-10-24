@@ -13,6 +13,7 @@
         "firefox"
         "Supersonic"
       ];
+
       mac = "2C:BE:EE:4A:5B:32";
     in
     {
@@ -88,7 +89,6 @@
               hide_if_total_is_zero = true;
             }
           ];
-          icons = "awesome6";
           settings.theme = {
             theme = "bad-wolf";
             overrides = with basenix.colors; {

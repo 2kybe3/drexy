@@ -1,14 +1,6 @@
 {
-  flake.homeModules.kybe =
-    {
-      lib,
-      pkgs,
-      ...
-    }:
-    {
-      fonts.fontconfig = {
-        enable = true;
-        antialiasing = true;
-      };
-    };
+  flake.homeModules.kybe.fonts.fontconfig = {
+    enable = true;
+    antialiasing = true;
+  };
 }

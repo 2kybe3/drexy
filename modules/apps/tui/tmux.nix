@@ -2,9 +2,19 @@
   flake.homeModules.kybe =
     {
       lib,
+      config,
       ...
     }:
     {
+      home.shellAliases =
+        let
+          tmux = lib.getExe config.programs.tmux.package;
+        in
+        {
+          tm = "${tmux} new-session -A -s main";
+          tmc = "${tmux} new-session -A -s ";
+        };
+
       programs.tmux = {
         enable = true;
         extraConfig = /* bash */ ''
@@ -17,8 +27,10 @@
           unbind '"'
           unbind %
 
+          # <master>E kills the session
           bind-key E kill-session
 
+          # vim mode
           set -g mouse off
           set -g mode-keys vi
 
@@ -28,7 +40,8 @@
           set -g base-index 1
           setw -g pane-base-index 1
 
-          # Set terminal with proper colors
+          # theming
+          set -g window-status-style bg=default
           set -g status-style bg=default
           set -g status-justify centre
 
@@ -36,6 +49,5 @@
           bind c new-window -c "#{pane_current_path}"
         '';
       };
-
     };
 }

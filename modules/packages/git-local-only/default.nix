@@ -2,8 +2,6 @@
   perSystem =
     {
       pkgs,
-      config,
-      inputs',
       ...
     }:
     {

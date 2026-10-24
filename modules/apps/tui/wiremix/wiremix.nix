@@ -2,8 +2,6 @@
   perSystem =
     {
       pkgs,
-      config,
-      inputs',
       ...
     }:
     {
@@ -16,7 +14,6 @@
 
   flake.homeModules.kybe =
     {
-      pkgs,
       self',
       basenix,
       ...

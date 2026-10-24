@@ -1,7 +1,6 @@
 {
   flake.nixosModules.system =
     {
-      lib,
       pkgs,
       config,
       ...
@@ -10,13 +9,7 @@
       nix = {
         enable = true;
         channel.enable = false;
-        registry = {
-          n.to = config.nix.registry.nixpkgs.to;
-          # nus.to = {
-          #   type = "path";
-          #   path = inputs.nixpkgs-unstable-small;
-          # };
-        };
+        registry.n.to = config.nix.registry.nixpkgs.to;
         settings = {
           warn-dirty = false;
           auto-optimise-store = true;
@@ -36,11 +29,5 @@
         };
         gc.automatic = true;
       };
-
-      environment.systemPackages = with pkgs; [
-        nix-output-monitor
-        attic-client
-        nix-update
-      ];
     };
 }

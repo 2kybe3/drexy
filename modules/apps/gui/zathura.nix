@@ -1,5 +1,3 @@
 {
-  flake.homeModules.kybe = { config, ... }: {
-    programs.zathura.enable = true;
-  };
+  flake.homeModules.kybe.programs.zathura.enable = true;
 }

@@ -37,7 +37,6 @@
         extraConfig = ''
           --user-agent "Mozilla/5.0 (X11; Linux x86_64; rv:${librewolfVersion}) Gecko/20100101 Firefox/${librewolfVersion}"
         '';
-
       };
     };
 }
