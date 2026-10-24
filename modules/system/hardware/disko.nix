@@ -48,44 +48,43 @@
               type = "luks";
               name = "crypted";
               settings.allowDiscards = true;
-              content = {
-                type = "btrfs";
-                extraArgs = [ "-f" ];
-                subvolumes = {
-                  "@" = {
-                    mountpoint = "/";
-                    mountOptions = [
-                      "compress=zstd"
-                      "noatime"
-                    ];
-                  };
-                  "@home" = {
-                    mountpoint = "/home";
-                    mountOptions = [
-                      "compress=zstd"
-                      "noatime"
-                    ];
-                  };
-                  "@nix" = {
-                    mountpoint = "/nix";
-                    mountOptions = [
-                      "compress=zstd"
-                      "noatime"
-                    ];
-                  };
-                  "@persistent" = {
-                    mountpoint = "/persistent";
-                    mountOptions = [
-                      "compress=zstd"
-                      "noatime"
-                    ];
-                  };
-                  "@swap" = {
-                    mountpoint = "/.swapvol";
-                    swap.swapfile.size = "10G";
+              content =
+                let
+                  mountOptions = [
+                    "compress=zstd"
+                    "noatime"
+                  ];
+                in
+                {
+                  type = "btrfs";
+                  extraArgs = [ "-f" ];
+
+                  mountpoint = "/roots";
+                  inherit mountOptions;
+
+                  subvolumes = {
+                    "@" = {
+                      mountpoint = "/";
+                      inherit mountOptions;
+                    };
+                    "@home" = {
+                      mountpoint = "/home";
+                      inherit mountOptions;
+                    };
+                    "@nix" = {
+                      mountpoint = "/nix";
+                      inherit mountOptions;
+                    };
+                    "@persistent" = {
+                      mountpoint = "/persistent";
+                      inherit mountOptions;
+                    };
+                    "@swap" = {
+                      mountpoint = "/.swapvol";
+                      swap.swapfile.size = "10G";
+                    };
                   };
                 };
-              };
             };
           };
         };
