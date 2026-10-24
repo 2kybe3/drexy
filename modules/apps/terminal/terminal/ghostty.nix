@@ -13,7 +13,7 @@
         enable = true;
         settings = {
           font-size = 11;
-          background-opacity = 0.9;
+          background-opacity = 0.75;
           app-notifications = [
             "no-clipboard-copy"
           ];

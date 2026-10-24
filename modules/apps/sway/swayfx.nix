@@ -28,15 +28,15 @@
         extraConfig = with basenix.colors; ''
           blur enable
           blur_xray disable
-          blur_passes 3
-          blur_radius 3
+          blur_passes 2
+          blur_radius 1
 
           default_dim_inactive 0.4
 
           smart_gaps on
 
           gaps outer 2
-          gaps inner 2
+          gaps inner 3
 
           smart_borders on
 
