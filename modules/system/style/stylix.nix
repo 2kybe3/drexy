@@ -57,6 +57,9 @@
     };
 
   flake.homeModules.kybe = { lib, pkgs, ... }: {
+    stylix.targets.gtk.extraCss = ''
+      window.background { border-radius: 0; }
+    '';
     gtk.enable = true;
     qt.enable = true;
   };
