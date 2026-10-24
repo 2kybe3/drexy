@@ -3,7 +3,10 @@
     packages.stylix-patched = pkgs.applyPatches {
       name = "stylix-patched";
       src = inputs.stylix;
-      patches = [ ./patches/gtk.diff ];
+      patches = [
+        ./patches/gtk.diff
+        ./patches/qt.diff
+      ];
     };
   };
 
