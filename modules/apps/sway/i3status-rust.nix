@@ -89,6 +89,7 @@
               hide_if_total_is_zero = true;
             }
           ];
+          icons = "awesome6";
           settings.theme = {
             theme = "bad-wolf";
             overrides = with basenix.colors; {
