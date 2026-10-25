@@ -77,7 +77,13 @@
             }
             {
               block = "sound";
-              format = "{ $volume.eng(w:2) | MUTE }";
+              device_kind = "source";
+              format = "{ I $volume.eng(w:2) | I MUTE }";
+            }
+            {
+              block = "sound";
+              device_kind = "sink";
+              format = "{ S $volume.eng(w:2) | S MUTE }";
             }
             {
               block = "time";
