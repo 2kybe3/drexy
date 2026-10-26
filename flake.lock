@@ -401,11 +401,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1792990787,
-        "narHash": "sha256-WjNIn/mvFGVU178qYiUIL7DL6GdZWLeboaCjRZKEeo0=",
+        "lastModified": 1792991287,
+        "narHash": "sha256-hL0+IBquMfv5PMaLfjQeiGeGEmlpJ22ZZknpNcK86Dg=",
         "ref": "refs/heads/main",
-        "rev": "b3e5efa75fb601f5cfa9b791d60f4e4985e8321a",
-        "revCount": 118,
+        "rev": "e8fe52c5f6ce6f122d51ab5e3b153fcd5abba20c",
+        "revCount": 119,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kyvim.git"
       },
