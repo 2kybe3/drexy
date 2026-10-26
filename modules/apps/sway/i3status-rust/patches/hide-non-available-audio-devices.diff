@@ -1,30 +1,53 @@
 diff --git a/src/blocks/sound.rs b/src/blocks/sound.rs
-index baab6a58e..4f42f99ae 100644
+index baab6a58e..a0a9f274e 100644
 --- a/src/blocks/sound.rs
 +++ b/src/blocks/sound.rs
-@@ -331,11 +331,20 @@ pub(crate) async fn run(config: &Config, api: &CommonApi, plan: &Arc<BlockPlan>)
+@@ -23,6 +23,7 @@
+ //! `mappings` | Map `output_name` to a custom name. | `None`
+ //! `mappings_use_regex` | Let `mappings` match using regex instead of string equality. The replacement will be regex aware and can contain capture groups. | `true`
+ //! `active_port_mappings` | Map `active_port` to a custom name. The replacement will be regex aware and can contain capture groups. | `None`
++//! `hide_when_inactive` | Hides the block when the audio device is unavailable. | `false`
+ //!
+ //! Placeholder          | Value                             | Type   | Unit
+ //! ---------------------|-----------------------------------|--------|---------------
+@@ -125,6 +126,7 @@ pub struct Config {
+     pub mappings_use_regex: bool,
+     pub max_vol: Option<u32>,
+     pub active_port_mappings: IndexMap<SerdeRegex, String>,
++    pub hide_when_inactive: bool,
+ }
+ 
+ enum Mappings<'a> {
+@@ -330,13 +332,27 @@ pub(crate) async fn run(config: &Config, api: &CommonApi, plan: &Arc<BlockPlan>)
+             }
          }
  
++        let update_visibility = |api: &CommonApi,
++                                 widget: &crate::widget::Widget,
++                                 config: &Config,
++                                 device: &DeviceType|
++         -> Result<(), Error> {
++            if config.hide_when_inactive && !device.available() {
++                api.hide()?;
++            } else {
++                api.set_widget(widget.clone())?;
++            }
++            Ok(())
++        };
++
          widget.set_values(values);
 -        api.set_widget(widget)?;
-+        if device.available() {
-+            api.set_widget(widget.clone())?;
-+        } else {
-+            api.hide()?;
-+        }
++        update_visibility(api, &widget, config, &device)?;
  
          loop {
              select! {
                  val = device.wait_for_update() => {
-+                    if device.available() {
-+                        api.set_widget(widget.clone())?;
-+                    } else {
-+                        api.hide()?;
-+                    }
                      val?;
++                    update_visibility(api, &widget, config, &device)?;
                      break;
                  }
-@@ -387,6 +396,7 @@ pub enum DeviceKind {
+                 _ = api.wait_for_update_request() => break,
+@@ -387,6 +403,7 @@ pub enum DeviceKind {
  
  #[async_trait::async_trait]
  trait SoundDevice {
@@ -33,7 +56,7 @@ index baab6a58e..4f42f99ae 100644
      fn muted(&self) -> bool;
      fn output_name(&self) -> String;
 diff --git a/src/blocks/sound/alsa.rs b/src/blocks/sound/alsa.rs
-index 4fff9e788..41befd6ee 100644
+index 4fff9e788..6ac9b246e 100644
 --- a/src/blocks/sound/alsa.rs
 +++ b/src/blocks/sound/alsa.rs
 @@ -7,6 +7,7 @@ use super::SoundDevice;
@@ -48,7 +71,7 @@ index 4fff9e788..41befd6ee 100644
      pub(super) fn new(name: String, device: String, natural_mapping: bool) -> Result<Self> {
          Ok(Device {
              name,
-+            available: false,
++            available: true,
              device,
              natural_mapping,
              volume: 0,
@@ -150,7 +173,7 @@ index bca4cc410..547526074 100644
          self.muted
      }
 diff --git a/src/blocks/sound/pulseaudio.rs b/src/blocks/sound/pulseaudio.rs
-index 91b9717ba..73981e078 100644
+index 91b9717ba..54eaf003d 100644
 --- a/src/blocks/sound/pulseaudio.rs
 +++ b/src/blocks/sound/pulseaudio.rs
 @@ -41,6 +41,7 @@ impl DeviceKind {
@@ -165,7 +188,7 @@ index 91b9717ba..73981e078 100644
  
          let device = Device {
              name,
-+            available: false,
++            available: true,
              description: None,
              active_port: None,
              form_factor: None,

@@ -96,8 +96,9 @@
             {
               block = "sound";
               driver = "pipewire";
-              name = "bluez_input.2C_BE_EE_4A_5B_32.0";
+              hide_when_inactive = true;
               format = " I {$volume.eng(w:2) |MUTE }";
+              name = "bluez_input.2C_BE_EE_4A_5B_32.0";
             }
             {
               block = "sound";
