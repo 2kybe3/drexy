@@ -12,6 +12,8 @@
           "nvidia-settings"
           "nvidia-x11"
 
+          "intellij-idea"
+
           "steam-unwrapped"
           "steam"
 
