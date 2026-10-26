@@ -101,19 +101,23 @@
             overrides = with basenix.colors; {
               # BG
               idle_bg = base00;
-              alternating_tint_bg = base01;
+              idle_fg = base05;
+
+              info_bg = base00;
+              info_fg = base0D;
 
               good_bg = base00;
-              info_bg = base00;
-              warning_bg = base00;
-
               good_fg = base0B;
-              info_fg = base0D;
+
+              warning_bg = base00;
               warning_fg = base0F;
 
-              # FG
-              alternating_tint_fg = base05;
-              idle_fg = base05;
+              critical_bg = base00;
+              critical_fg = base08;
+
+              alternating_tint_bg = base01;
+              # none so the fg doesn't get added which ends up being pure white
+              alternating_tint_fg = "none";
             };
           };
         };
