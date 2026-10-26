@@ -18,7 +18,6 @@
         enable = true;
         # https://pipewire.pages.freedesktop.org/wireplumber/daemon/configuration/alsa.html
         extraConfig = {
-          "100-bluetooth"."wireplumber.settings"."bluetooth.autoswitch-to-headset-profile" = false;
           "101-disable-unneeded"."monitor.alsa.rules" = [
             {
               matches = [
@@ -29,6 +28,14 @@
               actions.update-props."node.disabled" = true;
             }
           ];
+          "102-default-settings"."wireplumber.settings" = {
+            "device.routes.default-source-volume" = 0.0;
+
+            "device.routes.mute-on-alsa-playback-removed" = true;
+            "device.routes.mute-on-bluetooth-playback-removed" = true;
+
+            "bluetooth.autoswitch-to-headset-profile" = false;
+          };
         };
       };
       alsa.enable = true;
