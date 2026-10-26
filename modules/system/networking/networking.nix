@@ -1,74 +1,41 @@
-{ secrets, ... }: {
-  flake.nixosModules.networking =
-    {
-      config,
-      ...
-    }:
-    {
-      sops.secrets.wifi = {
-        sopsFile = "${secrets}/system/wifi/wifi.env.bin";
-        format = "binary";
-      };
+{
+  flake.nixosModules.networking = {
+    networking.networkmanager = {
+      enable = true;
+      dns = "systemd-resolved";
+    };
 
-      networking.networkmanager = {
-        enable = true;
-        dns = "systemd-resolved";
-        ensureProfiles = {
-          environmentFiles = [ config.sops.secrets.wifi.path ];
-          profiles =
-            let
-              interface-name = "wlp0s26u1u4";
-            in
-            {
-              "home" = {
-                connection = {
-                  id = "MagentaWLAN-QWZ1";
-                  inherit interface-name;
-                  type = "wifi";
-                  uuid = "bba60051-a524-493e-9089-3f3d7a88c5bc";
-                };
-                ipv4 = {
-                  method = "auto";
-                };
-                ipv6 = {
-                  addr-gen-mode = "default";
-                  method = "auto";
-                };
-                wifi = {
-                  mode = "infrastructure";
-                  ssid = "MagentaWLAN-QWZ1";
-                };
-                wifi-security = {
-                  auth-alg = "open";
-                  key-mgmt = "wpa-psk";
-                  psk = "$HOME_KEY";
-                };
-              };
-              "kybe" = {
-                connection = {
-                  id = "kybe";
-                  inherit interface-name;
-                  type = "wifi";
-                  uuid = "2e3b1f20-0c7d-4594-9234-a9427e3b8274";
-                };
-                ipv4 = {
-                  method = "auto";
-                };
-                ipv6 = {
-                  addr-gen-mode = "default";
-                  method = "auto";
-                };
-                wifi = {
-                  mode = "infrastructure";
-                  ssid = "kybe";
-                };
-                wifi-security = {
-                  key-mgmt = "sae";
-                  psk = "$KYBE_KEY";
-                };
-              };
-            };
-        };
+    services.resolved = {
+      enable = true;
+      settings.Resolve = {
+        Domains = [ "~." ];
+        DNSOverTLS = "true";
+        DNSSEC = "false";
       };
     };
+
+    networking = {
+      nftables.enable = true;
+      firewall.enable = true;
+      nameservers = [
+        # quad9 "unsecure"
+        "9.9.9.10"
+        "149.112.112.10"
+        "2620:fe::10"
+        "2620:fe::fe:10"
+
+        # cloudflare
+        "1.1.1.1"
+        "1.0.0.1"
+        "2606:4700:4700::1111"
+        "2606:4700:4700::1001"
+
+        # google
+        "8.8.8.8"
+        "8.8.4.4"
+        "2001:4860:4860::8888"
+        "2001:4860:4860::8844"
+      ];
+    };
+  };
 }
