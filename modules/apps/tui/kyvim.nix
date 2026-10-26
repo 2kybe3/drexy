@@ -10,7 +10,7 @@
       kyvim =
         (inputs.kyvim.lib.mkPackage {
           inherit pkgs basenix;
-        }).wrapped;
+        }).config.build.package;
     in
     {
       home = {

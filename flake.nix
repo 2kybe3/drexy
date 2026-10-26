@@ -79,7 +79,7 @@
       inputs = {
         basenix.follows = "basenix";
         nixpkgs.follows = "nixpkgs";
-        nixvim.inputs.flake-parts.follows = "flake-parts";
+        flake-parts.follows = "flake-parts";
       };
     };
 
