@@ -1,8 +1,22 @@
 { secrets, ... }: {
+  perSystem =
+    {
+      pkgs,
+      ...
+    }:
+    {
+      packages.i3status-rust = pkgs.i3status-rust.overrideAttrs (old: {
+        patches = (old.patches or [ ]) ++ [
+          ./patches/hide-non-available-audio-devices.diff
+        ];
+      });
+    };
+
   flake.homeModules.kybe =
     {
       lib,
       pkgs,
+      self',
       config,
       basenix,
       ...
@@ -38,24 +52,28 @@
 
       programs.i3status-rust = {
         enable = true;
-        package = pkgs.symlinkJoin {
-          inherit (pkgs.i3status-rust) pname version meta;
+        package =
+          let
+            i3status-rust = self'.packages.i3status-rust;
+          in
+          pkgs.symlinkJoin {
+            inherit (i3status-rust) pname version meta;
 
-          paths = [ pkgs.i3status-rust ];
+            paths = [ i3status-rust ];
 
-          buildInputs = [ pkgs.makeWrapper ];
+            buildInputs = [ pkgs.makeWrapper ];
 
-          postBuild = ''
-            wrapProgram $out/bin/i3status-rs \
-              --run 'export I3RS_GITHUB_TOKEN="$(cat ${config.sops.secrets.i3status-github-notifications.path})"'
-          '';
-        };
+            postBuild = ''
+              wrapProgram $out/bin/i3status-rs \
+                --run 'export I3RS_GITHUB_TOKEN="$(cat ${config.sops.secrets.i3status-github-notifications.path})"'
+            '';
+          };
 
         bars.default = {
           blocks = [
             {
               block = "cpu";
-              format = " $barchart";
+              format = " $barchart ";
               interval = 1;
             }
             {
@@ -72,18 +90,20 @@
           ++ [
             {
               block = "bluetooth";
-              format = " $name{ $percentage|} ";
+              format = " $name {$percentage |}";
               inherit mac;
             }
             {
               block = "sound";
-              device_kind = "source";
-              format = "{ I $volume.eng(w:2) | I MUTE }";
+              driver = "pipewire";
+              name = "bluez_input.2C_BE_EE_4A_5B_32.0";
+              format = " I {$volume.eng(w:2) |MUTE }";
             }
             {
               block = "sound";
+              driver = "pipewire";
               device_kind = "sink";
-              format = "{ S $volume.eng(w:2) | S MUTE }";
+              format = " S {$volume.eng(w:2) |MUTE }";
             }
             {
               block = "time";

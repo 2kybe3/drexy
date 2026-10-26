@@ -1,0 +1,197 @@
+diff --git a/src/blocks/sound.rs b/src/blocks/sound.rs
+index baab6a58e..4f42f99ae 100644
+--- a/src/blocks/sound.rs
++++ b/src/blocks/sound.rs
+@@ -331,11 +331,20 @@ pub(crate) async fn run(config: &Config, api: &CommonApi, plan: &Arc<BlockPlan>)
+         }
+ 
+         widget.set_values(values);
+-        api.set_widget(widget)?;
++        if device.available() {
++            api.set_widget(widget.clone())?;
++        } else {
++            api.hide()?;
++        }
+ 
+         loop {
+             select! {
+                 val = device.wait_for_update() => {
++                    if device.available() {
++                        api.set_widget(widget.clone())?;
++                    } else {
++                        api.hide()?;
++                    }
+                     val?;
+                     break;
+                 }
+@@ -387,6 +396,7 @@ pub enum DeviceKind {
+ 
+ #[async_trait::async_trait]
+ trait SoundDevice {
++    fn available(&self) -> bool;
+     fn volume(&self) -> u32;
+     fn muted(&self) -> bool;
+     fn output_name(&self) -> String;
+diff --git a/src/blocks/sound/alsa.rs b/src/blocks/sound/alsa.rs
+index 4fff9e788..41befd6ee 100644
+--- a/src/blocks/sound/alsa.rs
++++ b/src/blocks/sound/alsa.rs
+@@ -7,6 +7,7 @@ use super::SoundDevice;
+ 
+ pub(super) struct Device {
+     name: String,
++    available: bool,
+     device: String,
+     natural_mapping: bool,
+     volume: u32,
+@@ -18,6 +19,7 @@ impl Device {
+     pub(super) fn new(name: String, device: String, natural_mapping: bool) -> Result<Self> {
+         Ok(Device {
+             name,
++            available: false,
+             device,
+             natural_mapping,
+             volume: 0,
+@@ -32,34 +34,8 @@ impl Device {
+     }
+ }
+ 
+-#[async_trait::async_trait]
+-impl SoundDevice for Device {
+-    fn volume(&self) -> u32 {
+-        self.volume
+-    }
+-
+-    fn muted(&self) -> bool {
+-        self.muted
+-    }
+-
+-    fn output_name(&self) -> String {
+-        self.name.clone()
+-    }
+-
+-    fn output_description(&self) -> Option<String> {
+-        // TODO Does Alsa has something similar like descriptions in Pulse?
+-        None
+-    }
+-
+-    fn active_port(&self) -> Option<String> {
+-        None
+-    }
+-
+-    fn form_factor(&self) -> Option<&str> {
+-        None
+-    }
+-
+-    async fn get_info(&mut self) -> Result<()> {
++impl Device {
++    async fn get_inner_info(&mut self) -> Result<()> {
+         let mut args = Vec::new();
+         if self.natural_mapping {
+             args.push("-M");
+@@ -91,6 +67,44 @@ impl SoundDevice for Device {
+ 
+         Ok(())
+     }
++}
++
++#[async_trait::async_trait]
++impl SoundDevice for Device {
++    fn volume(&self) -> u32 {
++        self.volume
++    }
++
++    fn available(&self) -> bool {
++        self.available
++    }
++
++    fn muted(&self) -> bool {
++        self.muted
++    }
++
++    fn output_name(&self) -> String {
++        self.name.clone()
++    }
++
++    fn output_description(&self) -> Option<String> {
++        // TODO Does Alsa has something similar like descriptions in Pulse?
++        None
++    }
++
++    fn active_port(&self) -> Option<String> {
++        None
++    }
++
++    fn form_factor(&self) -> Option<&str> {
++        None
++    }
++
++    async fn get_info(&mut self) -> Result<()> {
++        let result = self.get_inner_info().await;
++        self.available = result.is_ok();
++        result
++    }
+ 
+     async fn set_volume(&mut self, step: i32, max_vol: Option<u32>) -> Result<()> {
+         let new_vol = max(0, self.volume as i32 + step) as u32;
+diff --git a/src/blocks/sound/pipewire.rs b/src/blocks/sound/pipewire.rs
+index bca4cc410..547526074 100644
+--- a/src/blocks/sound/pipewire.rs
++++ b/src/blocks/sound/pipewire.rs
+@@ -50,6 +50,10 @@ impl SoundDevice for Device {
+         self.volume_avg
+     }
+ 
++    fn available(&self) -> bool {
++        self.id.is_some()
++    }
++
+     fn muted(&self) -> bool {
+         self.muted
+     }
+diff --git a/src/blocks/sound/pulseaudio.rs b/src/blocks/sound/pulseaudio.rs
+index 91b9717ba..73981e078 100644
+--- a/src/blocks/sound/pulseaudio.rs
++++ b/src/blocks/sound/pulseaudio.rs
+@@ -41,6 +41,7 @@ impl DeviceKind {
+ 
+ pub(super) struct Device {
+     name: Option<String>,
++    available: bool,
+     description: Option<String>,
+     active_port: Option<String>,
+     form_factor: Option<String>,
+@@ -356,6 +357,7 @@ impl Device {
+ 
+         let device = Device {
+             name,
++            available: false,
+             description: None,
+             active_port: None,
+             form_factor: None,
+@@ -389,6 +391,10 @@ impl SoundDevice for Device {
+         self.volume_avg
+     }
+ 
++    fn available(&self) -> bool {
++        self.available
++    }
++
+     fn muted(&self) -> bool {
+         self.muted
+     }
+@@ -413,11 +419,14 @@ impl SoundDevice for Device {
+         let devices = DEVICES.lock().unwrap();
+ 
+         if let Some(info) = devices.get(&(self.device_kind, self.name())) {
++            self.available = true;
+             self.volume(info.volume);
+             self.muted = info.mute;
+             self.description.clone_from(&info.description);
+             self.active_port.clone_from(&info.active_port);
+             self.form_factor.clone_from(&info.form_factor);
++        } else {
++            self.available = false;
+         }
+ 
+         Ok(())
