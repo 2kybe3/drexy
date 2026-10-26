@@ -103,7 +103,7 @@
               block = "sound";
               driver = "pipewire";
               device_kind = "sink";
-              format = " S {$volume.eng(w:2) |MUTE }";
+              format = " O {$volume.eng(w:2) |MUTE }";
             }
             {
               block = "time";
