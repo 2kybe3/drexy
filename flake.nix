@@ -2,6 +2,14 @@
   inputs = {
     self.submodules = true;
 
+    # just for following purposes
+    systems.url = "github:nix-systems/default";
+    flake-utils = {
+      url = "github:numtide/flake-utils";
+      inputs.systems.follows = "systems";
+    };
+    crane.url = "github:ipetkov/crane";
+
     # core
     nixpkgs.url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst";
 
@@ -62,8 +70,11 @@
     stylix = {
       url = "github:nix-community/stylix";
       inputs = {
-        flake-parts.follows = "flake-parts";
         nixpkgs.follows = "nixpkgs";
+        systems.follows = "systems";
+        flake-parts.follows = "flake-parts";
+        base16-vim.follows = "basenix/schemas";
+        tinted-schemes.follows = "basenix/schemas";
       };
     };
 
@@ -80,6 +91,8 @@
         basenix.follows = "basenix";
         nixpkgs.follows = "nixpkgs";
         flake-parts.follows = "flake-parts";
+        import-tree.follows = "import-tree";
+        nixvim.inputs.systems.follows = "systems";
       };
     };
 
@@ -87,16 +100,20 @@
       url = "git+https://git.kybe.xyz/2kybe3/kymenu.git";
       inputs = {
         rust-overlay.follows = "rust-overlay";
+        flake-utils.follows = "flake-utils";
         nixpkgs.follows = "nixpkgs";
         treefmt-nix.follows = "";
+        crane.follows = "crane";
       };
     };
     kymenu-extras = {
       url = "git+https://git.kybe.xyz/2kybe3/kymenu-extras.git";
       inputs = {
         rust-overlay.follows = "rust-overlay";
+        flake-utils.follows = "flake-utils";
         nixpkgs.follows = "nixpkgs";
         treefmt-nix.follows = "";
+        crane.follows = "crane";
       };
     };
   };
