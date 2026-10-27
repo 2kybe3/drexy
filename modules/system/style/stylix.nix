@@ -24,12 +24,20 @@
 
       stylix = {
         enable = true;
+        base16Scheme = basenix.full;
+
         # disabled by default due too issues with non nixos distros
         targets.qt.enable = true;
-        base16Scheme = basenix.full;
+
+        cursor = {
+          name = "DMZ-Black";
+          package = pkgs.vanilla-dmz;
+          size = 12;
+        };
+
         fonts = {
           monospace = {
-            name = "FiraCode Nerd Font";
+            name = "FiraCode Nerd Font Mono";
             package = pkgs.nerd-fonts.fira-code;
           };
 
@@ -48,19 +56,26 @@
             package = pkgs.noto-fonts-color-emoji;
           };
         };
-        cursor = {
-          name = "DMZ-Black";
-          package = pkgs.vanilla-dmz;
-          size = 12;
-        };
       };
     };
 
-  flake.homeModules.kybe = { lib, pkgs, ... }: {
+  flake.homeModules.kybe = { pkgs, ... }: {
     stylix.targets.gtk.extraCss = ''
       window.background { border-radius: 0; }
     '';
+
     gtk.enable = true;
     qt.enable = true;
+
+    home.packages = with pkgs; [
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-cjk-serif
+    ];
+
+    fonts.fontconfig = {
+      enable = true;
+      antialiasing = true;
+    };
   };
 }
