@@ -12,7 +12,7 @@
           git
         ];
 
-        text = builtins.readFile ./script.sh;
+        text = builtins.readFile ./git-local-only.sh;
       };
     };
 }

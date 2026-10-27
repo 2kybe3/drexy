@@ -13,7 +13,7 @@
           duckdb
         ];
 
-        text = builtins.readFile ./script.sh;
+        text = builtins.readFile ./status-code.sh;
       };
     };
 }

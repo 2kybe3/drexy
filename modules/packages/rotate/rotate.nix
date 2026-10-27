@@ -12,7 +12,7 @@
           ffmpeg
         ];
 
-        text = builtins.readFile ./script.sh;
+        text = builtins.readFile ./rotate.sh;
       };
     };
 }
