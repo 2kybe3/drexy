@@ -8,6 +8,7 @@
     {
       nix = {
         enable = true;
+        package = pkgs.nixVersions.latest;
         channel.enable = false;
         registry.n.to = config.nix.registry.nixpkgs.to;
         settings = {
