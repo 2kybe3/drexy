@@ -348,11 +348,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1793148173,
-        "narHash": "sha256-m8DEdmo4VYmz6ATdafUuCW+9P4Xjz2hhdfBEuzHq3aE=",
+        "lastModified": 1793149261,
+        "narHash": "sha256-wh5dJA0kfq8LDCErejxrIPSuvlKlbCWoLrQ3wFDCenw=",
         "ref": "refs/heads/main",
-        "rev": "0fe8d8652f180bfd36328a6c45262768e2fc80f8",
-        "revCount": 120,
+        "rev": "6e9c17b12b64a03272a83958af7c65a32a0142cd",
+        "revCount": 121,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kyvim.git"
       },
