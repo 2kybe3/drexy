@@ -11,7 +11,7 @@
           --format bestaudio \
           --embed-metadata \
           --embed-thumbnail \
-          --output "%(title)s - %(artist)s - %(album)s.%(ext)s" \
+          --output "%(artist)s - %(album)s - %(title)s.%(ext)s" \
           --paths "$HOME/Music" \
           "$@"
       '';

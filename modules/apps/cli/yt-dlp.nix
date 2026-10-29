@@ -13,7 +13,10 @@
       );
     in
     {
-      home.packages = [ self'.packages.yt-audio ];
+      home.packages = [
+        self'.packages.yt-audio
+        self'.packages.yt-playlist
+      ];
 
       programs.yt-dlp = {
         enable = true;
