@@ -15,6 +15,7 @@
           calc
           cryptsetup
           ffmpeg
+          gh
           gimp
 
           # keep-sorted end
