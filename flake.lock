@@ -288,11 +288,11 @@
         "treefmt-nix": []
       },
       "locked": {
-        "lastModified": 1792751778,
-        "narHash": "sha256-rtiv/eieatLgfuyV3Y3CQfh+4Po0pbGcq9i9UTtfldQ=",
+        "lastModified": 1793360189,
+        "narHash": "sha256-0T5/blQeI3o1MeDvItISWE6MlnHnl3S15U3M9xJrg2w=",
         "ref": "refs/heads/main",
-        "rev": "5522c2a004d92ed13aa7b83c33e32dda1a800350",
-        "revCount": 127,
+        "rev": "c68e4e3029e9a3a26bea19ff8a2ec37053a3b6a0",
+        "revCount": 128,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kymenu.git"
       },
@@ -318,11 +318,11 @@
         "treefmt-nix": []
       },
       "locked": {
-        "lastModified": 1792751860,
-        "narHash": "sha256-8VnJet3SLdCG5n9tbMZY3uxDp5U7Dv82jHxa+G5CCZs=",
+        "lastModified": 1793360317,
+        "narHash": "sha256-Iw0+idwEeztS/sdLHR7HhakbzDrQO4TKduFOAkQGz5o=",
         "ref": "refs/heads/main",
-        "rev": "0ceacef9ecbb46acba41f06bf1379b50b01afea4",
-        "revCount": 86,
+        "rev": "7bb3c2b441a8ae299f4415115bdec38ea2110a19",
+        "revCount": 87,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kymenu-extras.git"
       },
@@ -348,11 +348,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1793289295,
-        "narHash": "sha256-cJYFsRsWHMGzxQFhoH7+1nESVURYjZoCAECjMj6H37I=",
+        "lastModified": 1793360108,
+        "narHash": "sha256-tUhEIwnsC4xPD8xH5LDMhJWgFYpu+a00DSQREHfVoQg=",
         "ref": "refs/heads/main",
-        "rev": "aceb1dde47d83239603d086b71084711e78f75c6",
-        "revCount": 123,
+        "rev": "6f52ff617e66575d86e1fcf991f1d3ae6e14b3a4",
+        "revCount": 124,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kyvim.git"
       },
@@ -492,11 +492,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793261817,
-        "narHash": "sha256-fAvtOccUXHVAH5wXK+ABYUUC47W2qTb9T9EefLcS9ME=",
+        "lastModified": 1793348683,
+        "narHash": "sha256-qv+P8z2xS5Xdws5Kigvr/WKJiaJSa6Ke8iH7ozmO53w=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "afcefd09c71e63663a46e4ce5e09968584f2c709",
+        "rev": "96a0986b0486341fbc163fa2fabc6d3b44cdcbf1",
         "type": "github"
       },
       "original": {
