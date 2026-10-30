@@ -1,6 +1,10 @@
 {
   flake.homeModules.kybe = { pkgs, ... }: {
-    home.packages = with pkgs; [ delta ];
+    home = {
+      packages = with pkgs; [ delta ];
+      shellAliases.g = "git";
+    };
+
     programs.git = {
       enable = true;
       lfs.enable = true;
@@ -23,6 +27,15 @@
         user = {
           name = "2kybe3";
           email = "kybe@kybe.xyz";
+        };
+        alias = {
+          a = "add";
+          aa = "add .";
+          p = "push";
+          ra = "remote add";
+          rh = "reset --hard";
+          rs = "reset --soft";
+          gdc = "diff --cached";
         };
       };
     };
