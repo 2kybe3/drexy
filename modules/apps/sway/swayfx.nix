@@ -69,7 +69,6 @@
 
           window.titlebar = false;
 
-          # TODO: stuff
           keybindings = {
             "${modifier}+p" = "exec ${lib.getExe self'.packages.kymenu-tmux-projects}";
             "${modifier}+Shift+p" = "exec ${lib.getExe self'.packages.kymenu-tmux-open}";
@@ -95,6 +94,9 @@
 
             "${modifier}+v" = "split v";
             "${modifier}+c" = "split h";
+
+            "${modifier}+Shift+minus" = "move scratchpad";
+            "${modifier}+minus" = "scratchpad show";
 
             "${modifier}+h" = "focus left";
             "${modifier}+j" = "focus down";
