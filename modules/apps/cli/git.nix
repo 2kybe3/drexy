@@ -31,6 +31,8 @@
         alias = {
           a = "add";
           aa = "add .";
+          d = "diff";
+          dc = "diff --cached";
           p = "push";
           ra = "remote add";
           rh = "reset --hard";
