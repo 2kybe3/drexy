@@ -55,7 +55,7 @@
 
           output.HDMI-A-1 = {
             mode = "1920x1080@75Hz";
-            bg = "${./wallpapers/creation.png} fill";
+            bg = "${./wallpapers/stormy-skies.png} fill";
           };
 
           defaultWorkspace = "workspace number 3";
@@ -68,6 +68,13 @@
           };
 
           window.titlebar = false;
+
+          startup = [
+            {
+              always = true;
+              command = "dbus-update-activation-environment --systemd --all";
+            }
+          ];
 
           keybindings = {
             "${modifier}+p" = "exec ${lib.getExe self'.packages.kymenu-tmux-projects}";

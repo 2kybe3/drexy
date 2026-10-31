@@ -107,6 +107,11 @@
               format = " O {$volume.eng(w:2) |MUTE }";
             }
             {
+              block = "notify";
+              driver = "dunst";
+              format = " N {$paused{false}|true} ";
+            }
+            {
               block = "time";
               format = " $timestamp.datetime(f:'%H:%M %d.%m') ";
               interval = 1;
