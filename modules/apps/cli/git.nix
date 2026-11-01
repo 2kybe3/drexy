@@ -31,13 +31,19 @@
         alias = {
           a = "add";
           aa = "add .";
+
+          c = "commit";
+          cm = "commit -m";
+
+          p = "push";
+
           d = "diff";
           dc = "diff --cached";
-          p = "push";
-          ra = "remote add";
+
           rh = "reset --hard";
           rs = "reset --soft";
-          gdc = "diff --cached";
+
+          ra = "remote add";
         };
       };
     };
