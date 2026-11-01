@@ -16,6 +16,12 @@
               url = "https://matrix.kybe.xyz";
             };
           };
+          features = {
+            feature_latex_maths = true;
+            feature_pinning = true;
+            feature_jump_to_date = true;
+            feature_dm_verification = true;
+          };
           default_theme = "dark";
           default_device_display_name = hostName;
         };
