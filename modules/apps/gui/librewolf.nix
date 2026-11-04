@@ -115,6 +115,9 @@
 
           # theme plugin
           "xpinstall.signatures.required" = false;
+
+          # persistent extension storage
+          "extensions.webextensions.ExtensionStorageIDB.enabled" = true;
         };
       };
     };
