@@ -18,6 +18,8 @@
           "steam"
 
           "obsidian"
+
+          "corefonts"
         ];
     };
 }
