@@ -288,11 +288,11 @@
         "treefmt-nix": []
       },
       "locked": {
-        "lastModified": 1793360189,
-        "narHash": "sha256-0T5/blQeI3o1MeDvItISWE6MlnHnl3S15U3M9xJrg2w=",
+        "lastModified": 1793964958,
+        "narHash": "sha256-HQIYTUc5qsm3I/wi3F+ckhz46bsxFihyhSU8+5gLIIU=",
         "ref": "refs/heads/main",
-        "rev": "c68e4e3029e9a3a26bea19ff8a2ec37053a3b6a0",
-        "revCount": 128,
+        "rev": "e3d12c6f35375f1e762647402cc2a1c05d6e483f",
+        "revCount": 129,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kymenu.git"
       },
@@ -318,11 +318,11 @@
         "treefmt-nix": []
       },
       "locked": {
-        "lastModified": 1793360317,
-        "narHash": "sha256-Iw0+idwEeztS/sdLHR7HhakbzDrQO4TKduFOAkQGz5o=",
+        "lastModified": 1793965065,
+        "narHash": "sha256-sl6xQUGCALSROCwKartk2DeEHb1+HIlJHR+zLb7YBgE=",
         "ref": "refs/heads/main",
-        "rev": "7bb3c2b441a8ae299f4415115bdec38ea2110a19",
-        "revCount": 87,
+        "rev": "d4a00281bf258c41d884d8714f515c81a5a2fd31",
+        "revCount": 88,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kymenu-extras.git"
       },
@@ -348,11 +348,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1793433004,
-        "narHash": "sha256-Nvk58Q6Sf3J8iBntQQvERYwzDDTNqUuzcomwPspNzw0=",
+        "lastModified": 1793964880,
+        "narHash": "sha256-4poL8PLNtgsSmHJkVGpGVSkaSQIo0IQC9JEn+V1t+os=",
         "ref": "refs/heads/main",
-        "rev": "8fa6bb1e106a4a8de4236b6475b6119e7ed9023f",
-        "revCount": 128,
+        "rev": "a6ca7f6100e8173fecf46f5816e670ed7506e643",
+        "revCount": 129,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kyvim.git"
       },
@@ -383,11 +383,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1793795574,
-        "narHash": "sha256-ey4jOibbc003QnvG+D7j8S5w2m33vf0S800hWUMoDOI=",
-        "rev": "13e53762c5afaf384d4614e94527a9ccfafe41d0",
+        "lastModified": 1793826729,
+        "narHash": "sha256-JiTUXdoNJNvdD+fjVlftWiLKJfHut3cIi8j2HXL9kT4=",
+        "rev": "6dadaf4375be35033e1c84395adbd53ff5fded96",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.11pre1108269.13e53762c5af/nixexprs.tar.zst"
+        "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.11pre1108556.6dadaf4375be/nixexprs.tar.zst"
       },
       "original": {
         "type": "tarball",
@@ -492,11 +492,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793782363,
-        "narHash": "sha256-5Vod7vKm10hOilQvEhTwXbhBE+V0ZqXH0jBQJhkX3KQ=",
+        "lastModified": 1793956102,
+        "narHash": "sha256-dASUovwB3DUoTm6daga0hsNZZAFCCGlUS4FPBjK0OwA=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "7fcafdf6f0761462d68012aba6a627be3f008d68",
+        "rev": "74cebce67ef6671ea48fda353a5be2d229bd2920",
         "type": "github"
       },
       "original": {
