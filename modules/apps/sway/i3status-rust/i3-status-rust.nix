@@ -5,10 +5,31 @@
       ...
     }:
     {
-      packages.i3status-rust = pkgs.i3status-rust.overrideAttrs (old: {
+      packages.i3status-rust = pkgs.i3status-rust.overrideAttrs (old: rec {
+        version = "0.40.0";
+
+        src = pkgs.fetchFromGitHub {
+          inherit (old.src) owner repo;
+          tag = "v${version}";
+          hash = "sha256-Q5RyGPHhCwamM2zexTCTmjMpIPrmZ/nsh1ZMeBhsO8I=";
+        };
+
         patches = (old.patches or [ ]) ++ [
           ./patches/hide-non-available-audio-devices.diff
         ];
+
+        cargoHash = "sha256-HVBIcAO+xQtfQs3RwI9xC53iu+NbMj+atCH0nbh2xMY=";
+
+        prePatch = ''
+          substituteInPlace src/util.rs \
+            --replace "/usr/share" "$out/share"
+        '';
+
+        postInstall = ''
+          mkdir -p $out/share/i3status-rust
+          cp -R examples files/* $out/share/i3status-rust
+          installManPage man/*
+        '';
       });
     };
 
@@ -31,6 +52,7 @@
       mac = "2C:BE:EE:4A:5B:32";
     in
     {
+      home.packages = with pkgs; [ font-awesome_7 ];
       sops.secrets.i3status-github-notifications.sopsFile = "${secrets}/home/i3status-rust/github-notifications.yaml";
 
       wayland.windowManager.sway.config.bars = [
@@ -121,7 +143,7 @@
               hide_if_total_is_zero = true;
             }
           ];
-          icons = "awesome6";
+          icons = "awesome7";
           settings.theme = {
             theme = "bad-wolf";
             overrides = with basenix.colors; {
