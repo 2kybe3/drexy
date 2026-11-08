@@ -11,6 +11,9 @@
     in
     {
       home.shellAliases = {
+        # scratchpad
+        sp = "$EDITOR ~/.sp";
+
         lava = "${lib.getExe pkgs.lavat} -g -c ${basenix.stripHash basenix.colors.base00} -k ${basenix.stripHash basenix.colors.base01}";
         clock = "${lib.getExe pkgs.clock-rs} --color \"${basenix.colors.base05}\"";
 
