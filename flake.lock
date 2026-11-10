@@ -348,11 +348,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1794071980,
-        "narHash": "sha256-5iOk0b5gYfcvjn63fH/qtn9TxWGMxqbyzV5LXdLj510=",
+        "lastModified": 1794321870,
+        "narHash": "sha256-CojMuSYPRhlQD4Q13U2vLx3HDpS84SoqZIZ7HMuvQh8=",
         "ref": "refs/heads/main",
-        "rev": "90c41f39e256cd0140bd51f7988f80feb2b8f69a",
-        "revCount": 130,
+        "rev": "a4700607edc3472a815784acd948c285d7e9c9f0",
+        "revCount": 131,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kyvim.git"
       },
@@ -492,11 +492,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794216702,
-        "narHash": "sha256-J+4v+Olc/2mN/bSc9CuAQ/PB7c0w1mzDJK8JvS7rKmM=",
+        "lastModified": 1794303164,
+        "narHash": "sha256-UZMtOt43/HRVssXPSuPv8t11Toq9+CjyWUfYQ3tqGVE=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "b70538330f20adc9665afa2976471eb5b85ebd1f",
+        "rev": "89750a2ef1c6a44db9f4251b16c23deffdcfddff",
         "type": "github"
       },
       "original": {
