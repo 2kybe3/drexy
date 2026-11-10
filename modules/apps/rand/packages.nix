@@ -25,6 +25,7 @@
 
           git-local-only
           greenfoot
+          review-gha
           rotate
           status-code
           tetro-tui
