@@ -30,7 +30,7 @@
             fi
 
             # GitHub likes to disable the workflow randomly
-            gh workflow enable review || true
+            gh workflow enable --repo "${repo}" review || true
             gh workflow run --repo "${repo}" review -f "pr=$1" -f "on-success=$2"
           '';
         }
