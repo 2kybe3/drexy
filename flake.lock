@@ -115,11 +115,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792526520,
-        "narHash": "sha256-3hSJlv8mUVnZPMWK2+CM7a9O+nR6Z4mCh27NfLCmTPc=",
+        "lastModified": 1794328522,
+        "narHash": "sha256-h2BYMW4nTFpIqnMd8gwAPFmJAp/1wWLQ6vT0NfL5qt4=",
         "owner": "nix-community",
         "repo": "disko",
-        "rev": "cedd626e11b635470fa6f9fdb8ad79b0075dd7f9",
+        "rev": "1dd30c29c88d99ce295f15e27f93c49bc5fbae07",
         "type": "github"
       },
       "original": {
@@ -288,11 +288,11 @@
         "treefmt-nix": []
       },
       "locked": {
-        "lastModified": 1793964958,
-        "narHash": "sha256-HQIYTUc5qsm3I/wi3F+ckhz46bsxFihyhSU8+5gLIIU=",
+        "lastModified": 1794385881,
+        "narHash": "sha256-oYtFdHu7z245fevMPy4chyTNrI4mRi2oXenSPN6KBvM=",
         "ref": "refs/heads/main",
-        "rev": "e3d12c6f35375f1e762647402cc2a1c05d6e483f",
-        "revCount": 129,
+        "rev": "f628bdad28227eb5ae52651df04800e3050480f3",
+        "revCount": 131,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kymenu.git"
       },
@@ -318,11 +318,11 @@
         "treefmt-nix": []
       },
       "locked": {
-        "lastModified": 1793965065,
-        "narHash": "sha256-sl6xQUGCALSROCwKartk2DeEHb1+HIlJHR+zLb7YBgE=",
+        "lastModified": 1794385942,
+        "narHash": "sha256-ch6CFt31fw1PLfAmsLGCjDo7/H90X94TEhSJH0h75mk=",
         "ref": "refs/heads/main",
-        "rev": "d4a00281bf258c41d884d8714f515c81a5a2fd31",
-        "revCount": 88,
+        "rev": "73acf2e2ce69d1e76f28b2d2602e29f69bf02bf9",
+        "revCount": 90,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kymenu-extras.git"
       },
@@ -348,11 +348,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1794321870,
-        "narHash": "sha256-CojMuSYPRhlQD4Q13U2vLx3HDpS84SoqZIZ7HMuvQh8=",
+        "lastModified": 1794385854,
+        "narHash": "sha256-Cq/ds1UCjMVm9Oo6v8u2wD7ZmyzIn7dJ0hF19vocFfE=",
         "ref": "refs/heads/main",
-        "rev": "a4700607edc3472a815784acd948c285d7e9c9f0",
-        "revCount": 131,
+        "rev": "1a867c196c39e97f5a1e87f639036a309d38c6bf",
+        "revCount": 133,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kyvim.git"
       },
@@ -492,11 +492,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794303164,
-        "narHash": "sha256-UZMtOt43/HRVssXPSuPv8t11Toq9+CjyWUfYQ3tqGVE=",
+        "lastModified": 1794388042,
+        "narHash": "sha256-rsskkiDNmuZGK6Xk3JvWUxWENjuX4Jf0hOSFYujGC0s=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "89750a2ef1c6a44db9f4251b16c23deffdcfddff",
+        "rev": "0070500a3d72ade21323092e7bdd7125c5268482",
         "type": "github"
       },
       "original": {

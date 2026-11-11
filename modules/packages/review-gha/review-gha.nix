@@ -19,11 +19,17 @@
           text = /* bash */ ''
             if [ -z "$1" ]; then
               echo "Error: Missing PR number."
-              echo "Usage: review-gha <pr-number>"
+              echo "Usage: review-gha <pr-number> <action>"
               exit 1
             fi
 
-            gh workflow run --repo "${repo}" review -f "pr=$1" -f "on-success=approve"
+            if [ -z "$2" ]; then
+              echo "Error: Missing on-success action"
+              echo "Usage: review-gha <pr-number> <action>"
+              echo "Possible Values: nothing/mark_as_ready/approve/merge"
+            fi
+
+            gh workflow run --repo "${repo}" review -f "pr=$1" -f "on-success=$2"
           '';
         }
       ) { };
