@@ -53,10 +53,8 @@
         config = {
           inherit modifier;
 
-          output.HDMI-A-1 = {
-            mode = "1920x1080@75Hz";
-            bg = "${./wallpapers/stormy-skies.png} fill";
-          };
+          output."Microstep MSI MP241X BA9H162200098".mode = "1920x1080@75Hz";
+          output."*".bg = "${./wallpapers/stormy-skies.png} fill";
 
           defaultWorkspace = "workspace number 3";
 
