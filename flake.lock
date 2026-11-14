@@ -348,11 +348,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1794599968,
-        "narHash": "sha256-8/ghNLTa0MvzXYtb/bLFuD1A3022aAFfskO4FaK7840=",
+        "lastModified": 1794667391,
+        "narHash": "sha256-yu+noyNNRXzQXtd7fAN6FCSqGC9S16i4tiMs4TyLip8=",
         "ref": "refs/heads/main",
-        "rev": "eb5d790f8c0757fbf6da44dba936275907a4b316",
-        "revCount": 137,
+        "rev": "4c0380a34124bc0e0a192ce8688ea389781c34e5",
+        "revCount": 139,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kyvim.git"
       },
@@ -424,11 +424,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792203519,
-        "narHash": "sha256-yJ072hxngo/srNdLTp4BlFeo0hedwnKicI3TGlSXLFE=",
+        "lastModified": 1794408140,
+        "narHash": "sha256-vS4BTt6CkLn2BLcYA7kZUxFNnZpPgW0GJ73s/VoPhWc=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "453dc9c5037e6d1bec81d2a51ddacd58a2f44e9c",
+        "rev": "44849d3d24b28d59fa963bd832ec59c60c56a34c",
         "type": "github"
       },
       "original": {
