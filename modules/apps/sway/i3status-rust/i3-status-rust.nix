@@ -5,31 +5,10 @@
       ...
     }:
     {
-      packages.i3status-rust = pkgs.i3status-rust.overrideAttrs (old: rec {
-        version = "0.40.0";
-
-        src = pkgs.fetchFromGitHub {
-          inherit (old.src) owner repo;
-          tag = "v${version}";
-          hash = "sha256-Q5RyGPHhCwamM2zexTCTmjMpIPrmZ/nsh1ZMeBhsO8I=";
-        };
-
+      packages.i3status-rust = pkgs.i3status-rust.overrideAttrs (old: {
         patches = (old.patches or [ ]) ++ [
           ./patches/hide-non-available-audio-devices.diff
         ];
-
-        cargoHash = "sha256-HVBIcAO+xQtfQs3RwI9xC53iu+NbMj+atCH0nbh2xMY=";
-
-        prePatch = ''
-          substituteInPlace src/util.rs \
-            --replace "/usr/share" "$out/share"
-        '';
-
-        postInstall = ''
-          mkdir -p $out/share/i3status-rust
-          cp -R examples files/* $out/share/i3status-rust
-          installManPage man/*
-        '';
       });
     };
 
