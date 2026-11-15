@@ -1,4 +1,4 @@
-{
+{ self, ... }: {
   flake.homeModules.kybe =
     {
       lib,
@@ -54,7 +54,7 @@
           inherit modifier;
 
           output."Microstep MSI MP241X BA9H162200098".mode = "1920x1080@75Hz";
-          output."*".bg = "${./wallpapers/stormy-skies.png} fill";
+          output."*".bg = "${self}/wallpapers/stormy-skies.png fill";
 
           defaultWorkspace = "workspace number 3";
 
