@@ -39,6 +39,7 @@
           position = "top";
           workspaceButtons = false;
           workspaceNumbers = false;
+          command = lib.getExe' config.wayland.windowManager.sway.package "swaybar";
           statusCommand = "${lib.getExe config.programs.i3status-rust.package} config-default.toml";
           trayOutput = "none";
 

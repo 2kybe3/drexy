@@ -21,7 +21,18 @@
 
       wayland.windowManager.sway = {
         enable = true;
-        package = pkgs.swayfx;
+        package = pkgs.swayfx.override {
+          swayfx-unwrapped = pkgs.swayfx-unwrapped.override {
+            json_c = pkgs.json_c.overrideAttrs (old: {
+              patches = (old.patches or [ ]) ++ [
+                (pkgs.fetchpatch {
+                  url = "https://github.com/json-c/json-c/commit/f291fa81c6f21d925ea771a8cca597f5886309cc.patch";
+                  hash = "sha256-ZffSw1pfEfOH2ylRpJShdx7sTQR2nmPM/JIj/26UrDM=";
+                })
+              ];
+            });
+          };
+        };
 
         checkConfig = false;
 
