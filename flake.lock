@@ -64,11 +64,11 @@
         "treefmt-nix": []
       },
       "locked": {
-        "lastModified": 1792778569,
-        "narHash": "sha256-SJvgu1H2dM+zudx7KI/kuZL3pwIjEHxJu2LdmLPL2NE=",
+        "lastModified": 1794982708,
+        "narHash": "sha256-+BjO0d10wim/jUw4e6y8WYQBbuFJthCmWuQOlknn7zw=",
         "ref": "refs/heads/main",
-        "rev": "2d4e9ab65757cb47c67244d353a5b37195a8464c",
-        "revCount": 12,
+        "rev": "e14320ee0340657e5407cf74f82e99074da5570c",
+        "revCount": 15,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/basenix.git"
       },
@@ -492,11 +492,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794911270,
-        "narHash": "sha256-wrtn0XCNjqWbuyDOcN5H+4EwgpmxWy22fAyX8e5Ttuk=",
+        "lastModified": 1794995857,
+        "narHash": "sha256-XWidHsxcg0iQuGea4URxcPV3rY+dB595L3Xs2xFrsPo=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "49f68bf7cd35f3ef31fca584a22cf3d4e13f6fec",
+        "rev": "6b05b928a40211beecaaa294e6f719aa2145a2a8",
         "type": "github"
       },
       "original": {
