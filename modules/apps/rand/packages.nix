@@ -12,6 +12,7 @@
           # keep-sorted start
 
           ansifilter
+          awscli2
           calc
           cryptsetup
           ffmpeg
