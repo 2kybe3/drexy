@@ -64,11 +64,11 @@
         "treefmt-nix": []
       },
       "locked": {
-        "lastModified": 1795174583,
-        "narHash": "sha256-kuTTjFc/s7SpMyV9VdKISMOjebgET+YPS973fMzv6qM=",
+        "lastModified": 1795199170,
+        "narHash": "sha256-nIbiyjuIMHfRcGONVfzXyp/hXR2nhtW1CBkWdXCeExo=",
         "ref": "refs/heads/main",
-        "rev": "6cd328014ef388a6aabaa3d1a0f12787eb461095",
-        "revCount": 16,
+        "rev": "41fa5a049d46ac17717404d9426b479a2f0a551f",
+        "revCount": 17,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/basenix.git"
       },
@@ -288,11 +288,11 @@
         "treefmt-nix": []
       },
       "locked": {
-        "lastModified": 1795188765,
-        "narHash": "sha256-YubO4Z8bTNMnWTaf12U+y3TFrwMNpq0OkzhUUIS4xKQ=",
+        "lastModified": 1795199027,
+        "narHash": "sha256-Ub8CDPHkzIhhnomO9DXUqR0oC22DgIdthHTBtDUKXiM=",
         "ref": "refs/heads/main",
-        "rev": "6658f0b716da3529feb1791625595b874e823550",
-        "revCount": 136,
+        "rev": "194e9ef90c44d6d85fab33e587b6e560c8474700",
+        "revCount": 137,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kymenu.git"
       },
@@ -318,11 +318,11 @@
         "treefmt-nix": []
       },
       "locked": {
-        "lastModified": 1795188859,
-        "narHash": "sha256-rjHMg7Iy+BpR/EfQu0O8035I2Wg7ODprgJkGmzp0x6I=",
+        "lastModified": 1795199071,
+        "narHash": "sha256-rSUYuLC7ci3X7gp3vZXmm55FMtCGulGHVfdWH0cj+so=",
         "ref": "refs/heads/main",
-        "rev": "3a4316add426710d7dbad5b5a7937453610173af",
-        "revCount": 95,
+        "rev": "d0bbe01efffd6c215ab71830f19492a7a38578ae",
+        "revCount": 96,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kymenu-extras.git"
       },
@@ -348,11 +348,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1795188737,
-        "narHash": "sha256-9QjazrXi0RUwM4AcBf8zZLIJu1eQDlUPzQwJO84F+lk=",
+        "lastModified": 1795198878,
+        "narHash": "sha256-4zw21L5iLu5urCqhqaO8EwHviF2VfhPKiwL0+ldtGOY=",
         "ref": "refs/heads/main",
-        "rev": "a8496505defb9a698218573934d07d9befd6055c",
-        "revCount": 142,
+        "rev": "e22631f926829ed065b27b781a8a0dc6cb8bf8e5",
+        "revCount": 143,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kyvim.git"
       },
