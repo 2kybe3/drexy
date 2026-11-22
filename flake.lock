@@ -64,11 +64,11 @@
         "treefmt-nix": []
       },
       "locked": {
-        "lastModified": 1795210358,
-        "narHash": "sha256-tHkMJpVamKyBBTZR6S2TCWeORWmAhVJWq2AO4ZAuqTg=",
+        "lastModified": 1795300724,
+        "narHash": "sha256-IImi1tg65iT9MIGy7VVpYCNnXFOyXvu8TH/PodnmobY=",
         "ref": "refs/heads/main",
-        "rev": "2df35d2cf47a9fdfd3c724bdabf941c27b673e35",
-        "revCount": 18,
+        "rev": "14753320d73553f1e1462740f899323e2e34a9ea",
+        "revCount": 19,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/basenix.git"
       },
@@ -224,11 +224,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795268568,
-        "narHash": "sha256-1RJm4DEu7YHJv94sjSY7sjqT+kHx/AUwmtUN4dtFBUo=",
+        "lastModified": 1795366757,
+        "narHash": "sha256-Tp4Kh4R7ID1f2mMCDlb2PiFQ/DZZsnXB2u2juWN+TT4=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "6857c7f7c338ad181729c52071386b0d3afa24bc",
+        "rev": "3b8140d21fa0a70b1b38c2ed29853dfe686234a6",
         "type": "github"
       },
       "original": {
@@ -288,11 +288,11 @@
         "treefmt-nix": []
       },
       "locked": {
-        "lastModified": 1795199027,
-        "narHash": "sha256-Ub8CDPHkzIhhnomO9DXUqR0oC22DgIdthHTBtDUKXiM=",
+        "lastModified": 1795300816,
+        "narHash": "sha256-RWG/0LqopGo4pBELPmeBjMXTOR7I/zxufeNAG65bp4Y=",
         "ref": "refs/heads/main",
-        "rev": "194e9ef90c44d6d85fab33e587b6e560c8474700",
-        "revCount": 137,
+        "rev": "1fbd4e93ac8228b082739051cc6e193e95f7d597",
+        "revCount": 138,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kymenu.git"
       },
@@ -318,11 +318,11 @@
         "treefmt-nix": []
       },
       "locked": {
-        "lastModified": 1795199071,
-        "narHash": "sha256-rSUYuLC7ci3X7gp3vZXmm55FMtCGulGHVfdWH0cj+so=",
+        "lastModified": 1795300760,
+        "narHash": "sha256-nChe5CXspIf5yv7O2dzRBe3zLNEjvie3ALi8Cy+i+4g=",
         "ref": "refs/heads/main",
-        "rev": "d0bbe01efffd6c215ab71830f19492a7a38578ae",
-        "revCount": 96,
+        "rev": "f14e9dec8a5c82b9bfe4d2082248a1e19e123534",
+        "revCount": 97,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kymenu-extras.git"
       },
@@ -348,11 +348,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1795198878,
-        "narHash": "sha256-4zw21L5iLu5urCqhqaO8EwHviF2VfhPKiwL0+ldtGOY=",
+        "lastModified": 1795300952,
+        "narHash": "sha256-ORSrucktK3HNgr5x6FwbApzOC4T6m+7RZl+fB1uLH04=",
         "ref": "refs/heads/main",
-        "rev": "e22631f926829ed065b27b781a8a0dc6cb8bf8e5",
-        "revCount": 143,
+        "rev": "69fca411bc8569555b63b6b01afbd8a8b18b2f6b",
+        "revCount": 144,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kyvim.git"
       },
@@ -368,11 +368,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794739050,
-        "narHash": "sha256-PCGNIyAydZcdUXCxEXTjrS1+wWS+k9E+ENqBkUK2Mpg=",
+        "lastModified": 1795345257,
+        "narHash": "sha256-p1dA8lUFQTLJfDI2gaTZQ+CcMKw3nxvyHNbwpVMy2rY=",
         "owner": "nix-community",
         "repo": "nix-index-database",
-        "rev": "9bd074026d6db75b59aae8cd6071b5f2fe27a36c",
+        "rev": "905f3e6f1e78165e79457c0bbe7ec4b885a5fce1",
         "type": "github"
       },
       "original": {
@@ -383,11 +383,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1795217999,
-        "narHash": "sha256-VgkIUPnO3Hugu/YIqNH6CmUoFz1rFsswtQ8kT8c2y50=",
-        "rev": "680275f0bb6afce84fbac3e75fc47c5f2272400b",
+        "lastModified": 1795249095,
+        "narHash": "sha256-tFvjrdir1xJuUxdmsv+yK9PiZ4IMnFCeT8z0iayTlso=",
+        "rev": "93a9ed0a866099a230ed5146a5bb7d16fd5c9b14",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.11pre1125786.680275f0bb6a/nixexprs.tar.zst"
+        "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.11pre1125912.93a9ed0a8660/nixexprs.tar.zst"
       },
       "original": {
         "type": "tarball",
@@ -492,11 +492,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795253373,
-        "narHash": "sha256-Vg6Sg8gJCDG9qpVEdOZX+72Z50MLwdnwtfZ8FNBwiYI=",
+        "lastModified": 1795340093,
+        "narHash": "sha256-fosvQ7eeQMrh6RvUXotBc6d92dHskAI6tu1EERJQ2LY=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "52db20539ec0ba063479d66092992d9efcf456ff",
+        "rev": "5aa410a1df0e4e9c25f3818320651c2bddf66aff",
         "type": "github"
       },
       "original": {
