@@ -60,13 +60,9 @@
     };
 
   flake.homeModules.kybe = { pkgs, ... }: {
-    stylix.targets = {
-      # https://github.com/nix-community/stylix/pull/2557
-      wayprompt.enable = false;
-      gtk.extraCss = ''
-        window.background { border-radius: 0; }
-      '';
-    };
+    stylix.targets.gtk.extraCss = ''
+      window.background { border-radius: 0; }
+    '';
 
     gtk.enable = true;
     qt.enable = true;
