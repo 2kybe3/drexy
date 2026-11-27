@@ -64,11 +64,11 @@
         "treefmt-nix": []
       },
       "locked": {
-        "lastModified": 1795379571,
-        "narHash": "sha256-R6rPQZY/HrGosqRedwzQO3r2DBDSJvoiaJu69Z/IHmA=",
+        "lastModified": 1795779398,
+        "narHash": "sha256-MLJujHzsGlf+iQuIra0ljIyfmXNFbzFagepDkaf74Wg=",
         "ref": "refs/heads/main",
-        "rev": "eb0684567769d8a06689eda3f2a888953939a355",
-        "revCount": 20,
+        "rev": "6e64607784d053ca2f7b98401425c05e9d13b9c7",
+        "revCount": 21,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/basenix.git"
       },
@@ -224,11 +224,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795713076,
-        "narHash": "sha256-GUY/RHSSnAJKKI3xk7xrSXrsXFgIOgFrRJOD4uub5J8=",
+        "lastModified": 1795748630,
+        "narHash": "sha256-J1iQ1QMnkFwZFXnlPt2t3Qx7TsGjw08/0L3QMqNt+Wg=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "361da94fb55c67094ec47322d2757d6616a0de92",
+        "rev": "54f903fdaaf5d5720ed36706fe75332af69eb793",
         "type": "github"
       },
       "original": {
@@ -288,11 +288,11 @@
         "treefmt-nix": []
       },
       "locked": {
-        "lastModified": 1795379560,
-        "narHash": "sha256-A6qyy/iFFL+iaKzuncAZ0+wAlBLentVNdHKgVbWNKJE=",
+        "lastModified": 1795779386,
+        "narHash": "sha256-NBLG6ilDR/fO268b4ss4OYvRaUhvZ0sJBeBtln5usA8=",
         "ref": "refs/heads/main",
-        "rev": "e8ee4bde3a22ce83db6040dd06b3509469eecee3",
-        "revCount": 139,
+        "rev": "022217206fb28a6ec4586d1c79d35a9c8a63e2a3",
+        "revCount": 140,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kymenu.git"
       },
@@ -318,11 +318,11 @@
         "treefmt-nix": []
       },
       "locked": {
-        "lastModified": 1795379657,
-        "narHash": "sha256-+rNkvIvuc25mXorCDstzB5zDjTUcWFoTGJDuTn79yfQ=",
+        "lastModified": 1795779525,
+        "narHash": "sha256-fQ20VndLFas3DzgyyRBqaQ2gei2sNqU9K+wAdi2cenc=",
         "ref": "refs/heads/main",
-        "rev": "d0ca92f9e7908aeec59d8e70f250e5a6775c8974",
-        "revCount": 98,
+        "rev": "23ad23593bf82a8c2dabe7400b52a1f5d47e0326",
+        "revCount": 99,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kymenu-extras.git"
       },
@@ -348,11 +348,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1795379536,
-        "narHash": "sha256-QThFvLSKvpcgbOBXOOMuphLvPLZTV70R2gSiEaepTYY=",
+        "lastModified": 1795779356,
+        "narHash": "sha256-DvtVnpnAOuwhi17K1glLIqh242+ybAngn6vj8XA17+c=",
         "ref": "refs/heads/main",
-        "rev": "d978da4f3fa586bb8349545f9bb6212d5e8012c0",
-        "revCount": 145,
+        "rev": "25cec8c79a90a4078778909d4c64bbd2a2ee6007",
+        "revCount": 146,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kyvim.git"
       },
@@ -508,11 +508,11 @@
     "schemas": {
       "flake": false,
       "locked": {
-        "lastModified": 1794820258,
-        "narHash": "sha256-4E/B4XUvRmJl3cgPxBp2y6rx6e2zaJN7MvaZ8VU48Z4=",
+        "lastModified": 1795525971,
+        "narHash": "sha256-uVXKeyL4KzuGSm66xO5jx0FGIzQSnrFvF41IMs1zviA=",
         "owner": "tinted-theming",
         "repo": "schemes",
-        "rev": "1bd5ad4c2c554c9c8e288b56deab2364ac8dada0",
+        "rev": "fde4a9bbdf33e2acdb997b4a4edaaf0cd27ce7de",
         "type": "github"
       },
       "original": {
@@ -651,11 +651,11 @@
     "tinted-vim": {
       "flake": false,
       "locked": {
-        "lastModified": 1794897585,
-        "narHash": "sha256-fnSn0DDryibSrM3R+9tDbQVVHrY1U/xPnVisJKL+DfM=",
+        "lastModified": 1795590318,
+        "narHash": "sha256-JICheOvBNS6e9y8pb/yhkbSZvlR37u1pTi+Ajfcfx6M=",
         "owner": "tinted-theming",
         "repo": "tinted-vim",
-        "rev": "444980354c7253bcbef3c3f458f5b027874f9194",
+        "rev": "17e8761922179d73bf0756b5eada76882564c051",
         "type": "github"
       },
       "original": {
