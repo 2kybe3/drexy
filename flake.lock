@@ -64,11 +64,11 @@
         "treefmt-nix": []
       },
       "locked": {
-        "lastModified": 1795779398,
-        "narHash": "sha256-MLJujHzsGlf+iQuIra0ljIyfmXNFbzFagepDkaf74Wg=",
+        "lastModified": 1795808422,
+        "narHash": "sha256-0N1Cw3meW+9gSyhowodCi3SQvDAs8COqCT6c0C6+e24=",
         "ref": "refs/heads/main",
-        "rev": "6e64607784d053ca2f7b98401425c05e9d13b9c7",
-        "revCount": 21,
+        "rev": "3115c13117e04d50c6abf74f9e1add18782aca1b",
+        "revCount": 23,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/basenix.git"
       },
@@ -224,11 +224,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795748630,
-        "narHash": "sha256-J1iQ1QMnkFwZFXnlPt2t3Qx7TsGjw08/0L3QMqNt+Wg=",
+        "lastModified": 1795827905,
+        "narHash": "sha256-Udjs2j0EkvK+qGXKHRIQwXWRgzNBIl4oXSUktuOzbmQ=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "54f903fdaaf5d5720ed36706fe75332af69eb793",
+        "rev": "5f5abf5eb8de62d954232f3797b5bf4505656b91",
         "type": "github"
       },
       "original": {
@@ -288,11 +288,11 @@
         "treefmt-nix": []
       },
       "locked": {
-        "lastModified": 1795779386,
-        "narHash": "sha256-NBLG6ilDR/fO268b4ss4OYvRaUhvZ0sJBeBtln5usA8=",
+        "lastModified": 1795808975,
+        "narHash": "sha256-vWe1hiZZG/Was8DdObEiLwjRTIHIu++htR1G8KDfLgA=",
         "ref": "refs/heads/main",
-        "rev": "022217206fb28a6ec4586d1c79d35a9c8a63e2a3",
-        "revCount": 140,
+        "rev": "c944f6fb9dafcf71b1ec1a4c416f54e63248cc86",
+        "revCount": 144,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kymenu.git"
       },
@@ -318,11 +318,11 @@
         "treefmt-nix": []
       },
       "locked": {
-        "lastModified": 1795779525,
-        "narHash": "sha256-fQ20VndLFas3DzgyyRBqaQ2gei2sNqU9K+wAdi2cenc=",
+        "lastModified": 1795820127,
+        "narHash": "sha256-w6NtI9w25JFr/Ou7P0VP+/n3JkVjb7z3UHMZd9CGvoY=",
         "ref": "refs/heads/main",
-        "rev": "23ad23593bf82a8c2dabe7400b52a1f5d47e0326",
-        "revCount": 99,
+        "rev": "d575d945154b7f402f8882e339c7978ee9196af6",
+        "revCount": 105,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/kymenu-extras.git"
       },
@@ -492,11 +492,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795689650,
-        "narHash": "sha256-gvke5rg5P9S2TAXdOASCqEPc/OdvPKaHIGoMlbYLJ/E=",
+        "lastModified": 1795860178,
+        "narHash": "sha256-ohgonNy3+RvquNpQVDOiI7lanO246mw1qZ/RaBIXUFE=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "8771c4aba509d6efb8bf376fd8cb657cce52b013",
+        "rev": "f88aa8dea8f4136a0897fd7baddb3a07481f29f6",
         "type": "github"
       },
       "original": {
